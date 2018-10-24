@@ -3,11 +3,9 @@ OASIS DITA Adoption whitepaper on content badging.
 
 Badging is a popular topic on several fronts. The three most popular forms of badging are:
 
-* *Achievement badging*: organizations set up collections of social media "badges" to recognize the involvement and achievement in employees, partners, and customers. 
+* *Achievement badging*: organizations set up collections of social media "badges" to recognize the involvement and achievement in employees, partners, and customers. Imagine if someone developed a technical certification program for DITA and awarded badges to program participants who passed tests for particular features.  
 
   ![DITA conref push expert](/images/badge_dita_conref-push.png)  ![DITA reltables expert](/images/badge_dita_reltables.png)  ![DITA scoped keys expert](/images/badge_dita_scopedkeys.png)
-
-  sample
 
 * *Status badging*: collaborative development platforms allow administrators to incorporate macros in their portal pages that display the current status of builds, workflow stages, contributions, and test coverage.
 
