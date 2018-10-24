@@ -22,13 +22,13 @@ The three most popular forms of badging are:
 Content badging is a medium- to high-risk content strategy for compound publications, that is, publications that document more than one product or version.
 
 
-== Typical use case for content badging
+## Typical use case for content badging
 
 A product development team releases Version 1.0 of its VMware hypervisor application. The content development team develops the complete documentation set for the VMware version of the product. A year later the same team releases its KVM version. The content development team uses DITA conditional filtering to publish separate VMware and KVM versions of the product documentation from the same DITA sources. A year later, the Hyper-V version of the application is available and the writing team uses conditional filtering to publish a third hypervisor-specific publication. 
 
 One year later Program Management decides that it wants to emphasize the commonality of the product across hypervirsor platforms and would like the content development team to develop one publication that "badges" any differences between the VMware, KVM, and Hyper-V versions of the product. 
 
-== The challenege of badging
+## The challenege of badging
 
 DITA writers and architects can be experts at excluding DITA content with conditional filtering, but clueless about how to "badge" that hypervisor-specific content for a unified publication. DITA conditional filtering is actually opposite of badging. 
 
