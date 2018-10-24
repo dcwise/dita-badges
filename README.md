@@ -13,10 +13,11 @@ The three most popular forms of badging are:
 
   sample
 
-* Status badging: collaborative development platforms such as GitHub, Bit Bucket, or AWS allow administrators to incorporate scripts in their portal pages that display th current status of builds, workflow stages, contributions, and xxx.
+* Status badging: collaborative development platforms such as GitHub, Bit Bucket, or AWS allow administrators to incorporate scripts in their portal pages that display the current status of builds, workflow stages, contributions, and xxx.
 
-- sample
-- sample
+  ![Test status](/images/badge_tests_pass-fail.svg)
+  
+  - sample
 
 * Content badging: content development organizations often decide to have one publication document a collection of closely-related products.   
 
