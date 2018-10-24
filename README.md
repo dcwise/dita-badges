@@ -23,9 +23,9 @@ Badging is a popular topic on several fronts. The three most popular forms of ba
     
 * *Content badging*: content development organizations often decide to have one publication document a collection of closely-related products. Content badges alert readers that particular topics, sections, or elements in the publication are or are not applicable to a specific product or release version. 
 
-  ![Topic not applicable to Cloud Compute](/images/badge_cloud-compute_no.png)
+  ![Topic not applicable to Cloud Compute](/images/badge_cloud-compute_no.png) Topic not applicable to Cloud Compute
 
-  ![Section applicable only to Cloud Compute](/images/badge_cloud-compute_small_yes.png)
+  ![Topic applicable only to Cloud Compute](/images/badge_cloud-compute_yes.png) Topic applicable only to Cloud Compute
 
   ![Not applicable to Cloud Compute](/images/tag_cloud-compute_not-supported.svg)
   
