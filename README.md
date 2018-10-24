@@ -3,7 +3,7 @@ OASIS DITA Adoption whitepaper on content badging in DITA
 
 Badging is a popular.
 
-== Types of badges
+## Types of badges
 
 The three most popular forms of badging are:
 
