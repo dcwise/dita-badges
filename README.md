@@ -9,13 +9,9 @@ The three most popular forms of badging are:
 
 * Achievement badging: organizations set up collections of social media "badges" to recognize the involvement and achievement in employees, partners, and customers. 
 
-![DITA conref push expert](/images/badge_dita_conref-push.png)
+  ![DITA conref push expert](/images/badge_dita_conref-push.png)  ![DITA reltables expert](/images/badge_dita_reltables.png)  ![DITA scoped keys expert](/images/badge_dita_scopedkeys.png)
 
-![DITA reltables expert](/images/badge_dita_reltables.png)
-
-![DITA scoped keys expert](/images/badge_dita_scopedkeys.png)
-
-- sample
+  sample
 
 * Status badging: collaborative development platforms such as GitHub, Bit Bucket, or AWS allow administrators to incorporate scripts in their portal pages that display th current status of builds, workflow stages, contributions, and xxx.
 
