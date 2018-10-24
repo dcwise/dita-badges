@@ -1,11 +1,7 @@
 # dita-badges
-OASIS DITA Adoption whitepaper on content badging in DITA
+OASIS DITA Adoption whitepaper on content badging.
 
-Badging is a popular.
-
-## Types of badges
-
-The three most popular forms of badging are:
+Badging is a popular topic on several fronts. The three most popular forms of badging are:
 
 * *Achievement badging*: organizations set up collections of social media "badges" to recognize the involvement and achievement in employees, partners, and customers. 
 
@@ -13,7 +9,7 @@ The three most popular forms of badging are:
 
   sample
 
-* *Status badging*: collaborative development platforms such as GitHub, Bit Bucket, or AWS allow administrators to incorporate scripts in their portal pages that display the current status of builds, workflow stages, contributions, and xxx.
+* *Status badging*: collaborative development platforms allow administrators to incorporate macros in their portal pages that display the current status of builds, workflow stages, contributions, and test coverage.
 
   ![Test status](/images/badge_tests_pass-fail.svg)
   
@@ -25,10 +21,14 @@ The three most popular forms of badging are:
 
   ![Build status failure](/images/badge_build_failure.svg)
     
-  - sample
+* *Content badging*: content development organizations often decide to have one publication document a collection of closely-related products. Content badges alert readers that particular topics, sections, or elements in the publication are or are not applicable to a specific product or release version. 
 
-* *Content badging*: content development organizations often decide to have one publication document a collection of closely-related products.   
+  ![Topic not applicable to Cloud Compute](/images/badge_cloud-compute_no.png)
 
+  ![Section applicable only to Cloud Compute](/images/badge_cloud-compute_small_yes.png)
+
+  ![Not applicable to Cloud Compute](/images/tag_cloud-compute_not-supported.svg)
+  
 Content badging is a medium- to high-risk content strategy for compound publications, that is, publications that document more than one product or version.
 
 
