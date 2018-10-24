@@ -17,6 +17,14 @@ The three most popular forms of badging are:
 
   ![Test status](/images/badge_tests_pass-fail.svg)
   
+  ![Build status passing](/images/badge_build_passing.svg)
+
+  ![Build status unknown](/images/badge_build_unknown.svg)
+
+  ![Build status failing](/images/badge_build_failing.svg)
+
+  ![Build status failure](/images/badge_build_failure.svg)
+    
   - sample
 
 * Content badging: content development organizations often decide to have one publication document a collection of closely-related products.   
