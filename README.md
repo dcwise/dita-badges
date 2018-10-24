@@ -32,6 +32,7 @@ One year later Program Management decides that it wants to emphasize the commona
 
 DITA writers and architects can be experts at excluding DITA content with conditional filtering, but clueless about how to "badge" that hypervisor-specific content for a unified publication. DITA conditional filtering is actually opposite of badging. 
 
+== Badging logic
 
 
  
