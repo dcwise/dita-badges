@@ -29,7 +29,9 @@ Badging is a popular topic on several fronts. The three most popular forms of ba
 
   ![Not applicable to Cloud Compute](/images/tag_cloud-compute_not-supported.svg)
   
-Content badging is a medium- to high-risk content strategy for compound publications, that is, publications that document more than one product or version.
+  ![Applicable only to Cloud Compute](/images/tag_cloud-compute_supported.svg)
+
+  Content badging is a medium- to high-risk content strategy for compound publications, that is, publications that document more than one product or version.
 
 
 ## Typical use case for content badging
