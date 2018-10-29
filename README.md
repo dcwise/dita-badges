@@ -38,16 +38,52 @@ A product development team releases Version 1.0 of its VMware hypervisor applica
 
 One year later Program Management decides that it wants to emphasize the commonality of the product across hypervirsor platforms and would like the content development team to develop one publication that "badges" any differences between the VMware, KVM, and Hyper-V versions of the product. 
 
-## The challenge of badging
+= The challenge of badging
 
 DITA writers and architects can be experts at excluding DITA content with conditional filtering, but clueless about how to "badge" that hypervisor-specific content for a unified publication. DITA conditional filtering is actually opposite of badging. 
 
 == Badging logic
 
 
- 
 The content development team knows where all the hypervisor-specific content 
 
+== Badging design
+
+xxx
+
+== Badging scope
+
+xxx
+
+== Badging governance
+
+xxxx
+
+== Badging and shared topics
+
+xxxx
+
+= Implementation
+
+== Literal badges
+
+xxxxx
+
+== Libraries
+
+xxxxx
+
+== Conref references to badge libraries
+
+xxxxx
+
+== Conkeytref references to badge libraries
+
+xxxxx
+
+== Conkeyref push 
+
+xxxxx
 
 
  
