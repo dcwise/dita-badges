@@ -38,14 +38,14 @@ A product development team releases Version 1.0 of its VMware hypervisor applica
 
 One year later Program Management decides that it wants to emphasize the commonality of the product across hypervirsor platforms and would like the content development team to develop one publication that "badges" any differences between the VMware, KVM, and Hyper-V versions of the product. 
 
-= The challenge of badging
+# The challenge of badging
 
 DITA writers and architects can be experts at excluding DITA content with conditional filtering, but clueless about how to "badge" that hypervisor-specific content for a unified publication. DITA conditional filtering is actually opposite of badging. 
 
 Conditional processing is not teh same as badging. Exclusuions (filtering) is not the same as badging.
 
 
-== Badging logic
+## Badging logic
 
 Establish a baseline . . . this publication supports the following products/features/releases unless otherwise idicated. 
 
@@ -57,7 +57,7 @@ yes = switch/no, ful/partiao/none
 
 The content development team knows where all the hypervisor-specific content 
 
-== Badging design
+## Badging design
 
 icon-based badges
 
@@ -65,7 +65,7 @@ label-based badginbg
 
 
 
-== Badging scope
+## Badging scope
 
 Topic = after <abstract> ??
 
@@ -75,21 +75,21 @@ Element
 
 
 
-== Badging governance
+## Badging governance
 
 If personalization fails . . . 
 
-== Badging and shared topics
+## Badging and shared topics
 
 xxxx
 
-= Implementation
+# Implementation
 
-== Literal badges
+## Literal badges
 
 xxxxx
 
-== Libraries
+## Libraries
 
 <p id-"xxx">
    <image href="xxx.png" 
@@ -100,15 +100,15 @@ This topic/section xxx . . .
 
 
 
-== Conref references to badge libraries
+## Conref references to badge libraries
 
 xxxxx
 
-== Conkeytref references to badge libraries
+## Conkeytref references to badge libraries
 
 xxxxx
 
-== Conkeyref push 
+## Conkeyref push 
 
 xxxxx
 
