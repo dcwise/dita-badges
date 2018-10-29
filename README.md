@@ -42,22 +42,42 @@ One year later Program Management decides that it wants to emphasize the commona
 
 DITA writers and architects can be experts at excluding DITA content with conditional filtering, but clueless about how to "badge" that hypervisor-specific content for a unified publication. DITA conditional filtering is actually opposite of badging. 
 
+Conditional processing is not teh same as badging. Exclusuions (filtering) is not the same as badging.
+
+
 == Badging logic
 
+Establish a baseline . . . this publication supports the following products/features/releases unless otherwise idicated. 
+
+How to read the documentation . . . 
+
+Object + switch = badge
+
+yes = switch/no, ful/partiao/none
 
 The content development team knows where all the hypervisor-specific content 
 
 == Badging design
 
-xxx
+icon-based badges
+
+label-based badginbg
+
+
 
 == Badging scope
 
-xxx
+Topic = after <abstract> ??
+
+Section = after <section><title>
+
+Element
+
+
 
 == Badging governance
 
-xxxx
+If personalization fails . . . 
 
 == Badging and shared topics
 
@@ -71,7 +91,14 @@ xxxxx
 
 == Libraries
 
-xxxxx
+<p id-"xxx">
+   <image href="xxx.png" 
+      <alt>xxxx<alt>
+   </image>
+This topic/section xxx . . . 
+</p>
+
+
 
 == Conref references to badge libraries
 
