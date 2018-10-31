@@ -125,11 +125,17 @@ You need to scope your badges (topic or section) to what the customer sees, not 
 
 Is it technically possible to create badges scoped to the level of DITA elements, for example paragraphs, figures, table rows, or phrases? Yes. 
 
-Practically, attempting to use the same type of badges for elements that you use for topic or sections can create a visual and logical train wreck. Teams that have successfully worked with badged documentation for multiple releases turn to `note` elements or in-line explanations for anything more granular than sections. 
+Practically, attempting to use the same badges for elements that you use for topics or sections can create a visual and logical train wreck. Teams that have successfully worked with badged documentation for multiple releases turn to `<note>` elements or in-line explanations for anything more granular than sections. Others use DITA flagging to color-code platform-specific information (accessibility - ouch). 
+
+Document the logic and the scoping of your badging strategy. 
 
 ## Going on a test drive 
 
-When Marketing 
+Once you have normed on your logic and authoring guidelines, apply them to a small publication. Badging is messy stuff and you do not want to implement it for a complete doc set until you have received a "go-ahead" from your stakeholders. You may find that they have objections or concerns that you had not factored into your design. 
+
+* xxx
+* xxx
+  
 
 # The challenge of badging
 
