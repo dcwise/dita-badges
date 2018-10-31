@@ -92,7 +92,7 @@ Whether you and your graphic designers choose icons or tags, build a library of 
 
 Markup | Rendered presentation
 -------|----------------------
-<p id="p_badge_icon_cloud-connect_section_yes"><br />
+`<p id="p_badge_icon_cloud-connect_section_yes">`<br />
   <image href="images/badge_cloud-connect_small_yes.png"><br />
     <alt>This section applies exclusively to Cloud Connect.</alt><br />
   </image><br />
