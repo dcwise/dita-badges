@@ -48,13 +48,28 @@ The following year, Cloud Connect completes the monitoring suite and the writing
 
 ![Use case - three products](/images/use-case_3.png)
 
-Content developers add the filtering attributes `@product="cloud-connect"` to those topics, sections, or elements that need to be filtered OUT of the other two product-specific deliverables. 
+Content developers add the filtering attribute `@product="cloud-connect"` to those topics, sections, or elements that need to be filtered OUT of the other two product-specific deliverables. 
 
 Six months after launch, Marketing receives feedback that emphasizing the common design and services across the three suite components will enhance customer perception that CloudSquared can consolidate its achievements and move on to new product lines. Toward that end, Product Management requests that the content development team consolidate the three, product-specific publications into one, multi-product publication.
 
 ![Use case - one combined product](/images/use-case_4.png)
 
-When transitioning from conditional filtering to badging, note that filtering metadata *useful* in identifying where product-specific information lives in your sources but *useless* as markup to implement badging. Filtering does a brilliant job supporting a many-to-one relationship between source content and delivered content. Many product-specific variations are filtered out to produce that one product-specific deliverable. Badging involves a many-to-many relationship. All the product-specific variations in the sources need to be accounted for in a multi-product deliverable.   
+When transitioning from conditional filtering to badging, note that filtering metadata is *useful* in identifying where product-specific information lives in your sources but *useless* as markup to implement badging. 
+
+Filtering markup: 
+
+```xml
+<p @product="cloud-connect">Cloud Connect is great.</p>
+```
+
+Badging markup: 
+
+```xml
+<p id="p_badge_icon_cloud-connect_section_yes"><image href="images/badge_cloud-connect_small_yes.png"></image><ph> This section applies exclusively to Cloud Connect.</ph></p><p>Cloud Connect is great.</p>
+```
+
+
+Filtering does a brilliant job supporting a many-to-one relationship between source content and delivered content. Many product-specific variations are filtered out to produce that one product-specific deliverable. Badging involves a many-to-many relationship. All the product-specific variations in the sources need to be accounted for in a multi-product deliverable.   
 
 ## Badge design and implementation
 
