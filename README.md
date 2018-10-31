@@ -32,7 +32,7 @@ Badging is a popular topic on several fronts. The three most popular forms of ba
   Content badging is a medium- to high-risk content strategy for compound publications, that is, publications that document more than one product or version.
 
 
-## Typical use case for content badging
+## A typical use case for content badging
 
 A startup named CloudSquared develops resource monitoring software for cloud-based frameworks. For its first product, Cloud Compute Monitoring, the content development team develops a complete documentation set for this one product.
 
@@ -42,15 +42,19 @@ A year later CloudSquared releases Cloud Net Monitoring so the content developme
 
 ![Use case - two products](/images/use-case_2.png)
 
+Content developers assign filtering attributes such as `@product="cloud-compute"` or `@product="cloud-net"` to topics, sections, or elements that need to be filtered OUT of a product-specific deliverable. 
+
 The following year, Cloud Connect completes the monitoring suite and the writing team uses conditional filtering to publish three separate publications. 
 
 ![Use case - three products](/images/use-case_3.png)
 
+Content developers add the filtering attributes `@product="cloud-connect"` to those topics, sections, or elements that need to be filtered OUT of the other two product-specific deliverables. 
 
-Marketing receives feedback that emphasizing the common design and services across the three suite components will enhance customer perception that CloudSquared can consolidate its achievements and move on to new product lines. Toward that end, Product Management requests that the content development team consolidate the three, product-specific publications into one, multiproduct publication.
+Six months after launch, Marketing receives feedback that emphasizing the common design and services across the three suite components will enhance customer perception that CloudSquared can consolidate its achievements and move on to new product lines. Toward that end, Product Management requests that the content development team consolidate the three, product-specific publications into one, multi-product publication.
 
 ![Use case - one combined product](/images/use-case_4.png)
 
+When transitioning from conditional filtering to badging, note that filtering metadata *useful* in identifying where product-specific information lives in your sources but *useless* as markup to implement badging. Filtering does a brilliant job supporting a many-to-one relationship between source content and delivered content. Many product-specific variations are filtered out to produce that one product-specific deliverable. Badging involves a many-to-many relationship. All the product-specific variations in the sources need to be accounted for in a multi-product deliverable.   
 
 ## Badge design and implementation
 
