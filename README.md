@@ -86,6 +86,7 @@ Regardless of how you implement badging in DITA, the content badges themselves h
 Visual cue | Content ID | Content scope | Content switch
 -----------|------------|----------------|--------------------
 ![Icon cue](/images/badge_cloud-net_small_yes.png)<br />![Tag cue](/images/cue_tags.png)|Cloud Net|This section | Applies to . . . 
+![Icon cue](/images/badge_cloud-net_small_no.png)<br />![Tag cue](/images/cue_tags.png)|Cloud Net|This section | Does not apply to . . . 
 
 
 
