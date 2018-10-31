@@ -50,7 +50,7 @@ The following year, Cloud Connect completes the monitoring suite and the writing
 
 Content developers add the filtering attribute `@product="cloud-connect"` to those topics, sections, or elements that need to be filtered OUT of the other two product-specific deliverables. 
 
-Six months after launch, Marketing receives feedback that emphasizing the common design and services across the three suite components will enhance customer perception that CloudSquared can consolidate its achievements and move on to new product lines. Toward that end, Product Management requests that the content development team consolidate the three, product-specific publications into one, multi-product publication.
+Six months after launch, Marketing receives feedback that emphasizing the common design and services across the three suite components will enhance customer perception that CloudSquared can consolidate its achievements and move on to new product lines. Toward that end, Product Management requests that the content development team consolidate the three, product-specific publications into one, multi-product publication. All generic and product-specific information appears in the same output.
 
 ![Use case - one combined product](/images/use-case_4.png)
 
@@ -72,12 +72,23 @@ Badging markup:
 <p>Cloud Connect is great.</p>
 ```
 
-
 Filtering does a brilliant job supporting a many-to-one relationship between source content and delivered content. Many product-specific variations are filtered out to produce that one product-specific deliverable. Badging involves a many-to-many relationship. All the product-specific variations in the sources need to be accounted for in a multi-product deliverable.   
 
+The real challenges with badging involve logic, aligning product-specific or version-specific content to visible badges in your sources. 
+
+ 
 ## Badge design and implementation
 
-Strange as it may seem, laying out all the badges that you might need will help you to prototype and validate your logic. 
+These sorts of logic and planning problems are best approached visually. Design exercises such as card sorting or affinitization depend upon multiple team members seeing all the variables and iteratively testing various arrangements or groupings. Similarly, making a first, complete pass designing all the content badges that you might need will accelerate the process of developing and refining the logic of your badging. If you want to code the badges up in a DITA library great, but that is not necessary for your opening discussions. Sticky notes or 3x5 cards do the job early on. 
+
+Regardless of how you implement badging in DITA, the content badges themselves have four basic components:
+
+Visual cue | Content ID | Content switch | Statement of scope
+-----------|------------|----------------|--------------------
+![Icon cue](/images/badge_cloud-net_small_yes.png)
+![Tag cue](/images/cue_tags.png)|xxx|xxx|yyy
+
+
 
 Badge + yes
 
