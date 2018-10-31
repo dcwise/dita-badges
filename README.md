@@ -117,31 +117,15 @@ This global statement allows you to add exclusionary badges as sparingly as poss
 ![Tag exclude topic](/images/tag_cloud-connect_not-supported.svg)
 
 
-establshing a logic fo your badging 
+## Badging and scope 
 
+When we content developers are looking at badged content in a DITA editor, asserting that a particular badge applies exclusively to this `<topic>` or that `<section>` is perfectly clear. Unfortunately the topic and section boundaries that we see in XML source are not visible or recoverable to customers. In a running PDF, where does the current "topic" or "section" end? If we chunk multiple source topics so they generate one HTML5 page in output, wouldn't the topic boundaries be misleading? If I insert a topic-level badge to indicate that no content in the topic applies to a particular product, what happens if another writer conref's a section from my topic? That conref'd section has no section badge. Messy stuff. 
 
-DITA badging and DITA conditional filtering both depend upon establishing a logic for all the content developers and technical reviewers. 
+You need to scope your badges (topic or section) to what the customer sees, not to our DITA sources. 
 
-Happens at two levels:
+Is it technically possible to create badges scoped to the level of DITA elements, for example paragraphs, figures, table rows, or phrases? Yes. 
 
-1. Global
-
-Publications that document multiple products or releases require a global statement that defines the baseline logic. 
-
-Minimal logic:
-
-* All content applies to all platforms unless specified otherwise. 
-
-Better logic:
-
-* All content applies to all platforms specifically excluded. 
-
-2. Local 
-
-Here are the options:
-
-*  , understanding how to exclude (conditional filtering) or include  
-
+Practically, attempting to use the same type of badges for elements that you use for topic or sections can create a visual and logical train wreck. Teams that have successfully worked with badged documentation for multiple releases turn to `note` elements or in-line explanations for anything more granular than sections. 
 
 ## Going on a test drive 
 
