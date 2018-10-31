@@ -88,6 +88,18 @@ Visual cue | Content ID | Content scope | Content switch
 ![Icon cue](/images/badge_cloud-net_small_yes.png)<br />![Tag cue](/images/cue_tags.png)|Cloud Net|This section | applies to . . . 
 ![Icon cue](/images/badge_cloud-net_small_no.png)<br />![Tag cue](/images/cue_tags.png)|Cloud Net|This topic  | does not apply to . . . 
 
+Whether you and your graphic designers choose icons or tags, build a library of reusable DITA badges is straight-forward. Consider starting with just one library for badging, call it `library_content-badges.dita`. 
+
+Markup | Rendered presentation
+-------|----------------------
+<p id="p_badge_icon_cloud-connect_section_yes"><br />
+  <image href="images/badge_cloud-connect_small_yes.png"><br />
+    <alt>This section applies exclusively to Cloud Connect.</alt><br />
+  </image><br />
+  <ph> This section applies exclusively to Cloud Connect.</ph><br />
+</p><br />|xxxxx
+
+
 
 
 
