@@ -34,9 +34,55 @@ Badging is a popular topic on several fronts. The three most popular forms of ba
 
 ## Typical use case for content badging
 
-A product development team releases Version 1.0 of its VMware hypervisor application. The content development team develops the complete documentation set for the VMware version of the product. A year later the same team releases its KVM version. The content development team uses DITA conditional filtering to publish separate VMware and KVM versions of the product documentation from the same DITA sources. A year later, the Hyper-V version of the application is available and the writing team uses conditional filtering to publish a third hypervisor-specific publication. 
+A startup named CloudSquared develops resource monitoring software for cloud-based frameworks. For its first product, Cloud Compute Monitoring, the content development team develops a complete documentation set for this one product.
 
-One year later Program Management decides that it wants to emphasize the commonality of the product across hypervirsor platforms and would like the content development team to develop one publication that "badges" any differences between the VMware, KVM, and Hyper-V versions of the product. 
+graphic
+
+A year later CloudSquared releases Cloud Net Monitoring so the content development team uses DITA conditional filtering to publish separate Cloud Compute and Cloud Net publications. 
+
+graphic 
+
+The following year, Cloud Connect completes the monitoring suite and the writing team uses conditional filtering to publish three separate publications. 
+
+graphic 
+
+Marketing receives feedback that emphasizing the common design and services across the three suite components will enhance customer perception that CloudSquared can consolidate its achievements and move on to new product lines. Toward that end, Product Management requests that the content development team consolidate the three, product-specific publications into one, multiproduct publication.
+
+graphic
+
+## Badge design and implementation
+
+Strange as it may seem, laying out all the badges that you might need will help you to prototype and validate your logic. 
+
+Badge + yes
+
+Badge + no
+ 
+
+## Establishing logic
+
+DITA badging and DITA conditional filtering both depend upon establishing a logic for all the content developers and technical reviewers. 
+
+Happens at two levels:
+
+1. Global
+
+Publications that document multiple products or releases require a global statement that defines the baseline logic. 
+
+Minimal logic:
+
+* All content applies to all platforms unless specified otherwise. 
+
+Better logic:
+
+* All content applies to all platforms specifically excluded. 
+
+2. Local 
+
+Here are the options:
+
+*  , understanding how to exclude (conditional filtering) or include  
+
 
 # The challenge of badging
 
