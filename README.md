@@ -65,7 +65,11 @@ Filtering markup:
 Badging markup: 
 
 ```xml
-<p id="p_badge_icon_cloud-connect_section_yes"><image href="images/badge_cloud-connect_small_yes.png"></image><ph> This section applies exclusively to Cloud Connect.</ph></p><p>Cloud Connect is great.</p>
+<p id="p_badge_icon_cloud-connect_section_yes">
+  <image href="images/badge_cloud-connect_small_yes.png"></image>
+  <ph>This section applies exclusively to Cloud Connect.</ph>
+</p>
+<p>Cloud Connect is great.</p>
 ```
 
 
