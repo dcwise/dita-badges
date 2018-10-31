@@ -101,6 +101,11 @@ Markup | Rendered presentation
 xx|zz
 
 
+Markup | Rendered presentation
+-------|----------------------
+`<p id="p_badge_icon_cloud-connect_section_yes">`<br />`  <image href="images/badge_cloud-connect_small_yes.png">`<br />`    <alt>This section applies exclusively to Cloud Connect.</alt>`<br />`  </image>`<br />`  <ph> This section applies exclusively to Cloud Connect.</ph>`<br />`</p>`<br />|![Icon rendered](/images/render1.png)
+xx|zz
+
 
 
 
