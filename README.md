@@ -131,10 +131,14 @@ Document the logic and the scoping of your badging strategy.
 
 ## Going on a test drive 
 
-Once you have normed on your logic and authoring guidelines, apply them to a small publication. Badging is messy stuff and you do not want to implement it for a complete doc set until you have received a "go-ahead" from your stakeholders. You may find that they have objections or concerns that you had not factored into your design. 
+Once you have normed on your logic and authoring guidelines, apply them to a small publication. Badging is messy stuff and you do not want to implement it for a complete doc set until you have received a "go-ahead" from your stakeholders. When they actually see a sample of your "badged" documentation, they may have objections or concerns that you had not factored into your design. 
 
-* xxx
-* xxx
+* *UXD*: xxx
+* *Support*: xxx
+* *Test engineering*: 
+* *Software engineering*: 
+* *Sales*:
+* *Marketing*: xxx
   
 
 # The challenge of badging
