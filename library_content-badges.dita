@@ -6,7 +6,6 @@
         <p></p>
         <section id="section_icon-based-topic-badges">
             <title>Topics: Icon-based badges</title>
-            <p/>
             <p id="p_badge_icon_cloud-compute_topic_yes">
                 <image href="images/badge_cloud-compute_small_yes.png">
                     <alt>This topic applies exclusively to Cloud Compute.</alt>
@@ -46,7 +45,6 @@
         </section>
         <section id="section_icon-based-section-badges">
             <title>Sections: Icon-based badges</title>
-            <p/>
             <p id="p_badge_icon_cloud-compute_section_yes">
                 <image href="images/badge_cloud-compute_small_yes.png">
                     <alt>This section applies exclusively to Cloud Compute.</alt>
@@ -86,7 +84,6 @@
         </section>
         <section id="section_tag-based-topic-badges">
             <title>Topics: Tag-based badges</title>
-            <p/>
             <p id="p_badge_tag_cloud-compute_topic_yes">
                 <image href="images/tag_cloud-compute_supported.svg">
                     <alt>This topic applies exclusively to Cloud Compute.</alt>
