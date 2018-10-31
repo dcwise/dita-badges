@@ -83,9 +83,9 @@ These sorts of logic and planning problems are best approached visually. Design 
 
 Regardless of how you implement badging in DITA, the content badges themselves have four basic components:
 
-Visual cue | Content ID | Content switch | Statement of scope
+Visual cue | Content ID | Content scope | Content switch
 -----------|------------|----------------|--------------------
-![Icon cue](/images/badge_cloud-net_small_yes.png)<br />![Tag cue](/images/cue_tags.png)|Cloud Net|This section . . . 
+![Icon cue](/images/badge_cloud-net_small_yes.png)<br />![Tag cue](/images/cue_tags.png)|Cloud Net|This section | Applies to . . . 
 
 
 
