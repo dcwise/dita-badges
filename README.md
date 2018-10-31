@@ -1,4 +1,4 @@
-# dita-badges
+# Content Bading in DITA
 OASIS DITA Adoption whitepaper on content badging.
 
 Badging is a popular topic on several fronts. The three most popular forms of badging are:
@@ -133,73 +133,23 @@ Document the logic and the scoping of your badging strategy.
 
 Once you have normed on your logic and authoring guidelines, apply them to a small publication. Badging is messy stuff and you do not want to implement it for a complete doc set until you have received a "go-ahead" from your stakeholders. When they actually see a sample of your "badged" documentation, they may have objections or concerns that you had not factored into your design. 
 
-* *UXD*: xxx
-* *Support*: xxx
-* *Test engineering*: 
-* *Software engineering*: 
-* *Sales*:
-* *Marketing*: xxx
-  
+* *UXD*: "Shouldn't the graphic design of the badges conform to the new company UX guidelines?"
+* *Support*: "Some customers are not careful readers and tend to ignore subtleties like these badges. They try something that is not appropriate for their product and then call us. Why are we doing this again? It is increasing our workload."
+* *Test engineering*: "When we tested your procedures in the product-specific manuals, we could clearly identify issues with your writing. The new format is interesting, but we are never quite sure whether we are supposed to be testing all product procedures at once or be tiptoeing through the product-specific procedures one at a time." 
+* *Software engineering*: "Sometimes the differences between product features are not so cut and dry, not quite so simple as 'supported' or 'not supported'. 
+* *Sales*: In pre-sales discussions, handing prospective customers manual that documents three products kinda confuses them if they are interesting in buying one."
+* *Marketing*: "I didn't realize that the docs would have so many badges."
+* *Legal*: "Our product documentation serves as the definitive product description. If the documentation does not accurately describe the product that the cutomer has purchased, we cannot recognize revebue."
 
-# The challenge of badging
+Showing everyone a robust sample of badged documentation generates discussion across the organization about badging and other requirements for product documentation. 
 
-DITA writers and architects can be experts at excluding DITA content with conditional filtering, but clueless about how to "badge" that hypervisor-specific content for a unified publication. DITA conditional filtering is actually opposite of badging. 
+## Placing badges in your topics
 
-Conditional processing is not teh same as badging. Exclusuions (filtering) is not the same as badging.
+Where you place badges is part common sense and team preference. 
 
-
-## Badging logic
-
-Establish a baseline . . . this publication supports the following products/features/releases unless otherwise idicated. 
-
-How to read the documentation . . . 
-
-Object + switch = badge
-
-yes = switch/no, ful/partiao/none
-
-The content development team knows where all the hypervisor-specific content 
-
-## Badging design
-
-icon-based badges
-
-label-based badginbg
-
-
-
-## Badging scope
-
-Topic = after <abstract> ??
-
-Section = after <section><title>
-
-Element
-
-
-
-## Badging governance
-
-If personalization fails . . . 
-
-## Badging and shared topics
-
-xxxx
-
-# Implementation
-
-## Literal badges
-
-xxxxx
-
-## Libraries
-
-<p id-"xxx">
-   <image href="xxx.png" 
-      <alt>xxxx<alt>
-   </image>
-This topic/section xxx . . . 
-</p>
+Badge type|Placement options
+----------|-------------------
+Topic|`<topic id="test1">`<br />`<title>Title</title>`<br \>`<shortdesc>Short description</shortdesc>`<br />`<body>`<br />`<p>Topic badge</p>`<br />`</body>`<br />`</topic>`<br /><br />xxx
 
 
 
