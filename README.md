@@ -104,6 +104,22 @@ Time you spend organizing these badge definitions in the library helps content d
 
 ## Establishing logic
 
+If your badges are crisply defined and you apply them logically and consistently to your content, badging works. The first step toward providing logic for your publication is having a global statement about non-badged content.
+
+> Unless otherwise indicated with a product badge such as ![Icon cue](/images/badge_cloud-net_small_no.png), all content applies equally to CloudSquared Cloud Compute, Cloud Net, and Cloud Connect. 
+
+This global statement allows you to add exclusionary badges as sparingly as possible throughout your publication. The more simple your logic for inserting a badge, the more consistently content developers will apply and maintain them. In this scenario, you do not need to insert any inclusive badges, only exclusive ones (not unlike your DITA filtering attributes). 
+  
+![Tag exclude topic](/images/tag_cloud-compute_not-supported.svg)
+
+![Tag exclude topic](/images/tag_cloud-net_not-supported.svg)
+
+![Tag exclude topic](/images/tag_cloud-connect_not-supported.svg)
+
+
+establshing a logic fo your badging 
+
+
 DITA badging and DITA conditional filtering both depend upon establishing a logic for all the content developers and technical reviewers. 
 
 Happens at two levels:
@@ -126,6 +142,10 @@ Here are the options:
 
 *  , understanding how to exclude (conditional filtering) or include  
 
+
+## Going on a test drive 
+
+When Marketing 
 
 # The challenge of badging
 
