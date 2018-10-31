@@ -36,19 +36,21 @@ Badging is a popular topic on several fronts. The three most popular forms of ba
 
 A startup named CloudSquared develops resource monitoring software for cloud-based frameworks. For its first product, Cloud Compute Monitoring, the content development team develops a complete documentation set for this one product.
 
-graphic
+![Use case - one product](/images/use-case_1.png)
 
 A year later CloudSquared releases Cloud Net Monitoring so the content development team uses DITA conditional filtering to publish separate Cloud Compute and Cloud Net publications. 
 
-graphic 
+![Use case - two products](/images/use-case_2.png)
 
 The following year, Cloud Connect completes the monitoring suite and the writing team uses conditional filtering to publish three separate publications. 
 
-graphic 
+![Use case - three products](/images/use-case_3.png)
+
 
 Marketing receives feedback that emphasizing the common design and services across the three suite components will enhance customer perception that CloudSquared can consolidate its achievements and move on to new product lines. Toward that end, Product Management requests that the content development team consolidate the three, product-specific publications into one, multiproduct publication.
 
-graphic
+![Use case - one combined product](/images/use-case_4.png)
+
 
 ## Badge design and implementation
 
