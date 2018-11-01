@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
-    <title></title>
+    <title>Content badges</title>
+    <topicref keys="badgelib" href="library_content-badges.dita"/>
     <topicref href="library_content-badges.dita"/>
+    <topicref href="Untitled1.dita"/>
+    <topicref href="conrefpush.dita" processing-role="resource-only"/>
 </map>
