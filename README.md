@@ -251,11 +251,10 @@ Before build time, you see no change in target topic content. At build time, the
 
 This would be the location where you would insert a section-level badge manually. If another team references `Untitled1.dita` without referencing `conrefpush.dita`, the badge never appears in their generated output.  
 
-As with many of these gee-whiz features in DITA, you need to weight the benefits of implementing conref push against the complexity that it introduces. Some technical solutions create more governance problems than they are worth. 
+As with many of these gee-whiz features in DITA, you need to weigh the benefits of implementing conref push against the complexity that it introduces. Some technical solutions create more governance problems than they are worth. 
 
 ## Conclusion
 
-No one said that solving complex content architecture issues in DITA would be easy. If your organization *does* need to design and implement content badging, hopefully some of the advice and best practices in this whitepper will prove useful. 
+No one said that solving complex content architecture issues in DITA would be easy. If your organization *does* need to design and implement content badging, hopefully some of the advice and best practices in this whitepaper will prove useful. 
 
 OASIS DITA Adoption Technical Committee
-the 
