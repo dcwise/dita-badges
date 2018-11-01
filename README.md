@@ -197,7 +197,7 @@ You can then reference the badge using @conkeyref (indirect referencing).
 <p conkeyref="badgelib/p_badge_tag_cloud-connect_topic_yes"/>
 ```
 
-The @conref and @conkeyref mechanisms reference the same badge definition in the same badge library file. Using indirect, key-based references is a wise investment because it will provide you with flexibility in managing multiple badge library files down the road. Change the key definition once, all @conkeyref references inhertit the new badge definition automatically.
+The @conref and @conkeyref mechanisms reference the same badge definition in the same badge library file. Using indirect, key-based references is a wise investment because it will provide you with flexibility in managing multiple badge library files down the road. Change the key definition once, all @conkeyref references inherit the new badge definition automatically.
 
 ## Referencing badges in shared topics
 
@@ -209,12 +209,12 @@ If you *must* share a badged topic across teams but do not want the badges to ap
 
 By default, @conrefs and @conkeyrefs "pull" referenced content into the corrent topic. @Conref push and @conkeyref push insert referenced content into a specific location in a target topic. 
 
-For example, let's say that a topic named `lag-props.dita` contained the following section.
+For example, let's say that a topic named `Untitled1.dita` contained the following section.
 
 ```xml
 <section>
   <title>Conref push example</title>
-  **<p id="p_first-para">The badge should be inserted above this paragraph. </p>**
+  <p id="p_first-para">The badge should be inserted above this paragraph. </p>
   <p>. . . </p>
 </section>
 ```
@@ -223,7 +223,7 @@ In its current state, this markup generates the following output.
 
 ![Section without conref push content.](/images/conref-push_1.png)
 
-To "push" a section-level badge into a target topic named `Untitled1.dita`, you need to create a separate conref push target. Let's call it `conrefpush.dita`. 
+To "push" a section-level badge into a target topic named `Untitled1.dita`, you need to create a separate topic that defines what you want to push into the target topic and where it should be inserted. Let's call that topic `conrefpush.dita`. 
 
 ![DITA map with conref push topic.](/images/conref-push_4.png)
 
