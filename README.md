@@ -164,9 +164,9 @@ Section|This places the badge in the first sentence of the `<section>`.<br />`<s
 
 ## Referencing badges in your topics
 
-If you have build a library for your badges and assigned each of them a unique ID, you can use @conref or @conkeyref to insert them by reference them into your current topic. 
+If you have built a library for your badges and assigned each of them a unique ID, you can use @conref or @conkeyref to insert them by reference them into your current topic. 
 
-Let's assume that you created a badging library named `library_content-badges.dita` with a topic @id of `library1`. That library contains the following badge definition.  
+Let's assume that you have created a badging library named `library_content-badges.dita` with a topic @id of `library1`. That library contains the following badge definition.  
 
 ```xml
 <p id="p_badge_tag_cloud-compute_topic_yes">
@@ -191,7 +191,7 @@ To insert this badge using DITA keys, you must first define a key for the badgin
 
 You can then reference the badge using @conkeyref (indirect referencing).
 
-``xml
+```xml
 <p conkeyref="badgelib/p_badge_tag_cloud-connect_topic_yes"/>
 ```
 
