@@ -1,13 +1,14 @@
-# Content Bading in DITA
+# Content Bading in OASIS DITA (FIRST REVIEW)
+
 OASIS DITA Adoption whitepaper on content badging.
 
 Badging is a popular topic on several fronts. The three most popular forms of badging are:
 
-* *Achievement badging*: organizations set up collections of social media "badges" to recognize the involvement and achievement in employees, partners, and customers. Imagine if someone developed a technical certification program for DITA and awarded badges to program participants who passed tests for particular features.  
+* *Achievement badging*: Organizations set up collections of social media "badges" to recognize the involvement and achievement in employees, partners, and customers. Imagine if someone developed a technical certification program for DITA and awarded badges to program participants who passed tests for particular features.  
 
   ![DITA conref push expert](/images/badge_dita_conref-push.png)  ![DITA reltables expert](/images/badge_dita_reltables.png)  ![DITA scoped keys expert](/images/badge_dita_scopedkeys.png)
 
-* *Status badging*: collaborative development platforms allow administrators to incorporate macros in their portal pages that display the current status of builds, workflow stages, contributions, and test coverage.
+* *Status badging*: Collaborative development platforms allow administrators to incorporate macros in their portal pages that display the current status of builds, workflow stages, contributions, and test coverage.
 
   ![Test status](/images/badge_tests_pass-fail.svg)
   
@@ -19,22 +20,22 @@ Badging is a popular topic on several fronts. The three most popular forms of ba
 
   ![Build status failure](/images/badge_build_failure.svg)
     
-* *Content badging*: content development organizations often decide to have one publication document a collection of closely-related products. Content badges alert readers that particular topics, sections, or elements in the publication are or are not applicable to a specific product or release version. 
+* *Content badging*: Content development organizations often decide to have one publication document multiple,  closely-related products. Content badges alert readers whether the relevance of a particular topic, section, or element is restricted to a specific product or release version. Here are some samples of icon-based and tag-based badges.
 
-  ![Topic not applicable to Cloud Compute](/images/badge_cloud-compute_no.png) Topic not applicable to Cloud Compute
+  ![Topic not applicable to Cloud Compute](/images/badge_cloud-compute_no.png) This topic does not apply to Cloud Compute.
 
-  ![Topic applicable only to Cloud Compute](/images/badge_cloud-compute_yes.png) Topic applicable only to Cloud Compute
+  ![Topic applicable only to Cloud Compute](/images/badge_cloud-compute_yes.png) This topic applies exclusively to Cloud Compute.
 
-  ![Not applicable to Cloud Compute](/images/tag_cloud-compute_not-supported.svg)
+  ![Not applicable to Cloud Compute](/images/tag_cloud-compute_not-supported.svg) This section does not apply to Cloud Compute.
   
-  ![Applicable only to Cloud Compute](/images/tag_cloud-compute_supported.svg)
+  ![Applicable only to Cloud Compute](/images/tag_cloud-compute_supported.svg) This topic applies exclusively to Cloud Compute. 
 
-  Content badging is a medium- to high-risk content strategy for compound publications, that is, publications that document more than one product or version.
+Content badging is a medium- to high-risk content strategy for compound publications, that is, publications that document more than one product or version.
 
 
 ## A typical use case for content badging
 
-A startup named CloudSquared develops resource monitoring software for cloud-based frameworks. For its first product, Cloud Compute Monitoring, the content development team develops a complete documentation set for this one product.
+A startup named CloudSquared develops resource monitoring software for cloud-based frameworks. For its first product, Cloud Compute Monitoring, the content development team develops a complete documentation set.
 
 ![Use case - one product](/images/use-case_1.png)
 
@@ -44,22 +45,30 @@ A year later CloudSquared releases Cloud Net Monitoring so the content developme
 
 Content developers assign filtering attributes such as `@product="cloud-compute"` or `@product="cloud-net"` to topics, sections, or elements that need to be filtered OUT of a product-specific deliverable. 
 
-The following year, Cloud Connect completes the monitoring suite and the writing team uses conditional filtering to publish three separate publications. 
+The following year, CloudSquared releases Cloud Connect and completes the monitoring suite. The writing team then uses conditional filtering to publish three separate publications. 
 
 ![Use case - three products](/images/use-case_3.png)
 
 Content developers add the filtering attribute `@product="cloud-connect"` to those topics, sections, or elements that need to be filtered OUT of the other two product-specific deliverables. 
 
-Six months after launch, Marketing receives feedback that emphasizing the common design and services across the three suite components will enhance customer perception that CloudSquared can consolidate its achievements and move on to new product lines. Toward that end, Product Management requests that the content development team consolidate the three, product-specific publications into one, multi-product publication. All generic and product-specific information appears in the same output.
+Six months after this launch, Marketing receives feedback that emphasizing common design and services across the three suite components will enhance customer perception that CloudSquared can consolidate its achievements and move on to new product lines. Toward that end, Product Management requests that the content development team consolidate the three, product-specific publications into one, multi-product publication. All generic and product-specific information would need to appear in the same deliverable.
 
 ![Use case - one combined product](/images/use-case_4.png)
 
-When transitioning from conditional filtering to badging, note that filtering metadata is *useful* in identifying where product-specific information lives in your sources but *useless* as markup to implement badging. 
+When transitioning from conditional filtering to badging, note that filtering metadata is *useful* in identifying where product-specific information lives in your sources but *useless* as markup to implement badging. In DITA, the logic to include or exclude elements tagged with filtering attributes such as @product or @audience lives in DITAVAL scripts outside the DITA topics themselves.  
 
-Filtering markup: 
+Filtering markup in a topic: 
 
 ```xml
 <p @product="cloud-connect">Cloud Connect is great.</p>
+```
+
+Filtering markup in a DITAVAL script:
+
+```xml
+<val>
+   <prop att="product" val="cloud-connect" action="exclude" />
+</val>
 ```
 
 Badging markup: 
@@ -74,12 +83,12 @@ Badging markup:
 
 Filtering does a brilliant job supporting a many-to-one relationship between source content and delivered content. Many product-specific variations are filtered out to produce that one product-specific deliverable. Badging involves a many-to-many relationship. All the product-specific variations in the sources need to be accounted for in a multi-product deliverable.   
 
-The real challenges with badging involve logic, aligning product-specific or version-specific content to visible badges in your sources. 
+The real challenges with badging involve logic. 
 
  
 ## Badge design and implementation
 
-These sorts of logic and planning problems are best approached visually. Design exercises such as card sorting or affinitization depend upon multiple team members seeing all the variables and iteratively testing various arrangements or groupings. Similarly, making a first, complete pass designing all the content badges that you might need will accelerate the process of developing and refining the logic of your badging. If you want to code the badges up in a DITA library great, but that is not necessary for your opening discussions. Sticky notes or 3x5 cards do the job early on. 
+Logic and planning problems of this sort are best approached visually. Design exercises such as card sorting or affinitization depend upon multiple team members seeing all the variables and iteratively testing various arrangements or groupings. Similarly, making a first, complete pass at designing all the content badges that you might need will accelerate the process of developing and refining the logic of your badging. If you have time to code the badges in a DITA library, that's great -- but sticky notes or 3x5 cards will suffice for team discussions early on. Move the cards around. Tape them to whitebaords. Staple them to printouts of your existing docs. Any exercise that simulates applying a badge to your content and thenasking whether that application makes sense is goodness.
 
 Regardless of how you implement badging in DITA, the content badges themselves have four basic components:
 
@@ -88,14 +97,14 @@ Visual cue | Content ID | Content scope | Content switch
 ![Icon cue](/images/badge_cloud-net_small_yes.png)<br />![Tag cue](/images/cue_tags.png)|Cloud Net|This section | applies to . . . 
 ![Icon cue](/images/badge_cloud-net_small_no.png)<br />![Tag cue](/images/cue_tags.png)|Cloud Net|This topic  | does not apply to . . . 
 
-Whether you and your graphic designers choose icons or tags, build a library of reusable DITA badges is straight-forward. Consider starting with just one library for badging, call it `library_content-badges.dita`. 
+Whether you and your graphic designers choose icons or tags, building a library of reusable DITA badges is straight-forward. Consider starting with just one library for badging, call it `library_content-badges.dita`. 
 
 Markup | Rendered presentation
 -------|----------------------
 `<p id="p_badge_icon_cloud-connect_section_yes">`<br />`  <image href="images/badge_cloud-connect_small_yes.png">`<br />`    <alt>This section applies exclusively to Cloud Connect.</alt>`<br />`  </image>`<br />`  <ph> This section applies exclusively to Cloud Connect.</ph>`<br />`</p>`<br />|![Icon rendered](/images/render1.png)
 `<p id="p_badge_tag_cloud-compute_topic_no">`<br />`<image href="images/tag_cloud-compute_not-supported.svg">`<br />`<alt>This topic does not apply to Cloud Compute.</alt>`<br \>`</image>`<br />`<ph> This topic does not apply to Cloud Compute.</ph>`<br />`</p>`|![Icon rendered](/images/render2.png)
 
-Time you spend organizing these badge definitions in the library helps content developers when they view them in a DITA editor. 
+Time that you spend organizing these badge definitions in a DITA library topic has a big payoff for content developers on your team. If writers can easily find the appropriate badge, they'll thank you -- eventually.  
 
 ![Badge library entries](/images/library1.png)
 
@@ -108,20 +117,21 @@ If your badges are crisply defined and you apply them logically and consistently
 
 > Unless otherwise indicated with a product badge such as ![Icon cue](/images/badge_cloud-net_small_no.png), all content applies equally to CloudSquared Cloud Compute, Cloud Net, and Cloud Connect. 
 
-This global statement allows you to add exclusionary badges as sparingly as possible throughout your publication. The more simple your logic for inserting a badge, the more consistently content developers will apply and maintain them. In this scenario, you do not need to insert any inclusive badges, only exclusive ones (not unlike your DITA filtering attributes). 
+This global statement sets the baseline logically. The only badges that the customer should expect to see would be ones that are exclusionary, identifying topics or sections that are *not* applicable to a particular product. The simpler your logic for inserting a badge, the more consistently content developers can apply them and customers can understand them. In this scenario, you do not need to insert any inclusive badges, only exclusive ones. This is not unlike DITA filtering attributes that are designed, generally, to exclude content from processed output. 
   
-![Tag exclude topic](/images/tag_cloud-compute_not-supported.svg)
+![Tag exclude topic](/images/tag_cloud-compute_not-supported.svg) This topic does not apply to Cloud Compute.
 
-![Tag exclude topic](/images/tag_cloud-net_not-supported.svg)
+![Tag exclude topic](/images/tag_cloud-net_not-supported.svg) This section does not apply to Cloud Net.
 
-![Tag exclude topic](/images/tag_cloud-connect_not-supported.svg)
+![Tag exclude topic](/images/tag_cloud-connect_not-supported.svg) This topic does not apply to Cloud Connect.
 
+In our use case, you would then require only six badges -- 3 products x 2 scopes (topic or section).
 
 ## Badging and scope 
 
-When we content developers are looking at badged content in a DITA editor, asserting that a particular badge applies exclusively to this `<topic>` or that `<section>` is perfectly clear. Unfortunately the topic and section boundaries that we see in XML source are not visible or recoverable to customers. In a running PDF, where does the current "topic" or "section" end? If we chunk multiple source topics so they generate one HTML5 page in output, wouldn't the topic boundaries be misleading? If I insert a topic-level badge to indicate that no content in the topic applies to a particular product, what happens if another writer conref's a section from my topic? That conref'd section has no section badge. Messy stuff. 
+When we content developers are looking at badged content in a DITA editor, we see where `<topic>` and `<section>` elements begin and end. We see the scope of the element relative to the topic displayed in our DITA editor. Unfortunately these topic and section boundaries are not visible or recoverable to customers. In a running PDF, where does the current "topic" or "section" end? If we chunk multiple source topics so they generate one HTML5 page in output, wouldn't the topic boundaries be misleading? If I insert a topic-level badge to indicate that no content in the topic applies to a particular product, what happens if another writer conref's a section from my topic? That conref'd section has no section badge. Messy stuff. 
 
-You need to scope your badges (topic or section) to what the customer sees, not to our DITA sources. 
+You need to scope your topic-level or section-level badges to what you expect the customer will see on the page or in a browser, not what we see in our DITA sources. How do you figure that out? You test it out and show it to people in all your generated output formats. 
 
 Is it technically possible to create badges scoped to the level of DITA elements, for example paragraphs, figures, table rows, or phrases? Yes. 
 
@@ -131,26 +141,26 @@ Document the logic and the scoping of your badging strategy.
 
 ## Going on a test drive 
 
-Once you have normed on your logic and authoring guidelines, apply them to a small publication. Badging is messy stuff and you do not want to implement it for a complete doc set until you have received a "go-ahead" from your stakeholders. When they actually see a sample of your "badged" documentation, they may have objections or concerns that you had not factored into your design. 
+Once you have normed on your logic and authoring guidelines, apply them to a small publication. Badging is messy stuff and you do not want to implement it for a complete doc set until you have received a "go-ahead" from your stakeholders. When they actually see a sample of your "badged" documentation, they may have objections or concerns that you had not factored into your initial design. 
 
 * *UXD*: "Shouldn't the graphic design of the badges conform to the new company UX guidelines?"
 * *Support*: "Some customers are not careful readers and tend to ignore subtleties like these badges. They try something that is not appropriate for their product and then call us. Why are we doing this again? It is increasing our workload."
 * *Test engineering*: "When we tested your procedures in the product-specific manuals, we could clearly identify issues with your writing. The new format is interesting, but we are never quite sure whether we are supposed to be testing all product procedures at once or be tiptoeing through the product-specific procedures one at a time." 
-* *Software engineering*: "Sometimes the differences between product features are not so cut and dry, not quite so simple as 'supported' or 'not supported'. 
+* *Software engineering*: "Sometimes the differences between product features are not binary, not quite so simple as 'supported' or 'not supported'. Some features are "minimally supported" or "mostly supported." 
 * *Sales*: In pre-sales discussions, handing prospective customers manual that documents three products kinda confuses them if they are interesting in buying one."
-* *Marketing*: "I didn't realize that the docs would have so many badges."
-* *Legal*: "Our product documentation serves as the definitive product description. If the documentation does not accurately describe the product that the cutomer has purchased, we cannot recognize revebue."
+* *Marketing*: "I didn't realize that the docs would need so many badges. Can you make them smaller or put them in the margin somewhere?"
+* *Legal*: "Our product documentation serves as the definitive product description. If the documentation does not accurately describe the product that the cutomer has purchased, we cannot recognize revenue."
 
 Showing everyone a robust sample of badged documentation generates discussion across the organization about badging and other requirements for product documentation. 
 
 ## Placing badges in your topics
 
-Where you place badges is part common sense and team preference. 
+Where you place badges is part common sense and part team preference. 
 
 Badge type|Placement options
 ----------|-------------------
-Topic|`<topic id="test1">`<br />`<title>Title</title>`<br />`<shortdesc>Short description</shortdesc>`<br />`<body>`<br />**`<p>Topic badge reference</p>`**<br />`</body>`<br />`</topic>`<br /><br />`<topic id="test2">`<br />`<title>Title</title>`<br />`<abstract>`<br />`<shortdesc>Short description</shortdesc>`<br />**`<p>Topic badge reference</p>`**<br />`</abstract>`<br />. . .
-Section|`<section>`<br />`<title>Section title</title>`<br />**`<p>Section badge reference</p>`**<br />`<p>. . .</p>`<br \>`</section>` 
+Topic|This places the badge in the first sentence of the body of the topic.<br />`<topic id="test1">`<br />`<title>Title</title>`<br />`<shortdesc>Short description</shortdesc>`<br />`<body>`<br />**`<p>Topic badge reference</p>`**<br />`</body>`<br />`</topic>`<br /><br />This places the badge inside the <abstract> element at the beginning of the topic.<br />`<topic id="test2">`<br />`<title>Title</title>`<br />`<abstract>`<br />`<shortdesc>Short description</shortdesc>`<br />**`<p>Topic badge reference</p>`**<br />`</abstract>`<br />. . .
+Section|This places the badge in the first sentence of the <section>.<br />`<section>`<br />`<title>Section title</title>`<br />**`<p>Section badge reference</p>`**<br />`<p>. . .</p>`<br \>`</section>` 
 
 ## Referencing badges in your topics
 
