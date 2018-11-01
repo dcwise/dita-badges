@@ -159,8 +159,8 @@ Where you place badges is part common sense and part team preference.
 
 Badge type|Placement options
 ----------|-------------------
-Topic|This places the badge in the first sentence of the body of the topic.<br />`<topic id="test1">`<br />`<title>Title</title>`<br />`<shortdesc>Short description</shortdesc>`<br />`<body>`<br />**`<p>Topic badge reference</p>`**<br />`</body>`<br />`</topic>`<br /><br />This places the badge inside the <abstract> element at the beginning of the topic.<br />`<topic id="test2">`<br />`<title>Title</title>`<br />`<abstract>`<br />`<shortdesc>Short description</shortdesc>`<br />**`<p>Topic badge reference</p>`**<br />`</abstract>`<br />. . .
-Section|This places the badge in the first sentence of the <section>.<br />`<section>`<br />`<title>Section title</title>`<br />**`<p>Section badge reference</p>`**<br />`<p>. . .</p>`<br \>`</section>` 
+Topic|This places the badge in the first sentence of the body of the topic.<br />`<topic id="test1">`<br />`<title>Title</title>`<br />`<shortdesc>Short description</shortdesc>`<br />`<body>`<br />**`<p>Topic badge reference</p>`**<br />`</body>`<br />`</topic>`<br /><br />This places the badge inside the `<abstract>` element at the beginning of the topic.<br />`<topic id="test2">`<br />`<title>Title</title>`<br />`<abstract>`<br />`<shortdesc>Short description</shortdesc>`<br />**`<p>Topic badge reference</p>`**<br />`</abstract>`<br />. . .
+Section|This places the badge in the first sentence of the `<section>`.<br />`<section>`<br />`<title>Section title</title>`<br />**`<p>Section badge reference</p>`**<br />`<p>. . .</p>`<br \>`</section>` 
 
 ## Referencing badges in your topics
 
