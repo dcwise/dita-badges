@@ -152,22 +152,80 @@ Badge type|Placement options
 Topic|`<topic id="test1">`<br />`<title>Title</title>`<br />`<shortdesc>Short description</shortdesc>`<br />`<body>`<br />**`<p>Topic badge reference</p>`**<br />`</body>`<br />`</topic>`<br /><br />`<topic id="test2">`<br />`<title>Title</title>`<br />`<abstract>`<br />`<shortdesc>Short description</shortdesc>`<br />**`<p>Topic badge reference</p>`**<br />`</abstract>`<br />. . .
 Section|`<section>`<br />`<title>Section title</title>`<br />**`<p>Section badge reference</p>`**<br />`<p>. . .</p>`<br \>`</section>` 
 
+## Referencing badges in your topics
 
+If you have build a library for your badges and assigned each of them a unique ID, you can use @conref or @conkeyref to insert them by reference them into your current topic. 
 
-## Conref references to badge libraries
+Let's assume that you created a badging library named `library_content-badges.dita` with a topic @id of `library1`. That library contains the following badge definition.  
 
-xxxxx
+```xml
+<p id="p_badge_tag_cloud-compute_topic_yes">
+  <image href="images/tag_cloud-compute_supported.svg">
+    <alt>This topic applies exclusively to Cloud Compute.</alt>
+  </image>
+  <ph> This topic applies exclusively to Cloud Compute.</ph>
+</p>
+```
 
-## Conkeytref references to badge libraries
+To insert this badge using @conref (URL referencing), you would enter the following markup.
 
-xxxxx
+```xml
+<p conref="library_content-badges.dita#library1/p_badge_tag_cloud-connect_topic_yes"/>
+```
 
-## Conkeyref push 
+To insert this badge using DITA keys, you must first define a key for the badging library in your current map.
 
-xxxxx
+```xml
+<topicref keys="badgelib" href="library_content-badges.dita"/>
+```
 
+You can then reference the badge using @conkeyref (indirect referencing).
 
- 
+``xml
+<p conkeyref="badgelib/p_badge_tag_cloud-connect_topic_yes"/>
+```
 
+## Referencing badges in shared topics
 
+If any of the topics that you badge for one of your team deliverables are referenced by content developers outside your team or outside your division, those badges will generate build errors or cause reader confusion. Be practical. Clone the shared topic and move on.
+
+If you *really* want to share a topic across teams but do not want badges to appear in all contexts, consider one of the more underutilized reuse mechanisms in DITA, conref push. 
+
+By default, conrefs and conkeyrefs "pull" referenced content into the corrent topic. Conref and conkeyref push insert referenced content into a specific location in a target topic. 
+
+For example, let's say that a topic named `lag-props.dita` contained the following section.
+
+```xml
+<section>
+  <title>Conref push example</title>
+  <p id="p_first-para">The badge should be inserted above this paragraph. </p>
+  <p>. . . </p>
+</section>
+```
+
+In its current state, this markup generates the following output.
+
+![Section without conref push content.](/images/conref-push_1.png)
+
+To "push" a section-level badge into the toopic before the paragraph with @id="first-para", insert the following markup into a fresh topic that is referenced in your publication map as @processing-role="resource-only". 
+
+```xml
+<p conaction="pushbefore">
+  <image href="images/badge_cloud-compute_small_yes.png">
+    <alt>This topic applies exclusively to Cloud Compute.</alt>
+  </image>
+  <ph> This topic applies exclusively to Cloud Compute.</ph>
+</p>
+<p conaction="mark" conref="Untitled1.dita#untitled/p_first-para" />
+```
+
+The first paragraph instructs the DITA processor to insert the contents of this paragraph *before* the target paragraph element. The second paragraph specifies that target  insertion point, in this case `<p id="p_first-para">The badge should be inserted above this paragraph.</p>`. 
+
+![Section with conref push content.](/images/conref-push_2.png)
+
+This would be the location where you would normally insert a section-level badge manually.line with @conaction="mark" specifies the target insertion point, the paragraph with @id="p_first-line".
+
+As with many of these gee-whiz features in DITA, you need to weight the benefits of implementing conref push against the complexity that it introduces. 
+
+## Conclusion
 
