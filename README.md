@@ -1,6 +1,8 @@
 # Content Bading in OASIS DITA (FIRST REVIEW)
 
-OASIS DITA Adoption whitepaper on content badging.
+OASIS DITA Adoption whitepaper on content badging. 
+
+All sample badges and supporting DITA examples are available to clone at `https://github.com/StanDoherty/dita-badges` (need OASIS home). 
 
 Badging is a popular topic on several fronts. The three most popular forms of badging are:
 
@@ -195,20 +197,24 @@ You can then reference the badge using @conkeyref (indirect referencing).
 <p conkeyref="badgelib/p_badge_tag_cloud-connect_topic_yes"/>
 ```
 
+The @conref and @conkeyref mechanisms reference the same badge definition in the same badge library file. Using indirect, key-based references is a wise investment because it will provide you with flexibility in managing multiple badge library files down the road. Change the key definition once, all @conkeyref references inhertit the new badge definition automatically.
+
 ## Referencing badges in shared topics
 
-If any of the topics that you badge for one of your team deliverables are referenced by content developers outside your team or outside your division, those badges will generate build errors or cause reader confusion. Be practical. Clone the shared topic and move on.
+What happens when the badged topics that support your three-product context get referenced by someone from another product group? At a minimum, they'll get a build error (missing key or reference). Ultimately their customers will not understand what is going on. 
 
-If you *really* want to share a topic across teams but do not want badges to appear in all contexts, consider one of the more underutilized reuse mechanisms in DITA, conref push. 
+Be practical. Badging is a work-around and will not scale beyond a workgroup. Clone the shared topic, remove the badges from the clone, and move on.
 
-By default, conrefs and conkeyrefs "pull" referenced content into the corrent topic. Conref and conkeyref push insert referenced content into a specific location in a target topic. 
+If you *must* share a badged topic across teams but do not want the badges to appear in all contexts, consider one of the more underutilized reuse mechanisms in DITA, conref push. 
+
+By default, @conrefs and @conkeyrefs "pull" referenced content into the corrent topic. @Conref push and @conkeyref push insert referenced content into a specific location in a target topic. 
 
 For example, let's say that a topic named `lag-props.dita` contained the following section.
 
 ```xml
 <section>
   <title>Conref push example</title>
-  <p id="p_first-para">The badge should be inserted above this paragraph. </p>
+  **<p id="p_first-para">The badge should be inserted above this paragraph. </p>**
   <p>. . . </p>
 </section>
 ```
@@ -217,7 +223,17 @@ In its current state, this markup generates the following output.
 
 ![Section without conref push content.](/images/conref-push_1.png)
 
-To "push" a section-level badge into the toopic before the paragraph with @id="first-para", insert the following markup into a fresh topic that is referenced in your publication map as @processing-role="resource-only". 
+To "push" a section-level badge into a target topic named `Untitled1.dita`, you need to create a separate conref push target. Let's call it `conrefpush.dita`. 
+
+![DITA map with conref push topic.](/images/conref-push_4.png)
+
+Set the @processing-role attribute of `conrefpush.dita` to "resource-only" in the map so the conref push topic does not appear alongside other content topics. 
+
+![Conref push topic processing role.](/images/conref-push_3.png)
+
+Setting this atttribute makes `conrefpush.dita` available to the DITA map and to the DITA processor, but not visible to the customer.  
+
+To "push" a badge into `Untitled1.dita` before the section paragraph with `@id="first-para"`, insert the following markup into `conrefpush.dita`. 
 
 ```xml
 <p conaction="pushbefore">
@@ -229,13 +245,17 @@ To "push" a section-level badge into the toopic before the paragraph with @id="f
 <p conaction="mark" conref="Untitled1.dita#untitled/p_first-para" />
 ```
 
-The first paragraph instructs the DITA processor to insert the contents of this paragraph *before* the target paragraph element. The second paragraph specifies that target  insertion point, in this case `<p id="p_first-para">The badge should be inserted above this paragraph.</p>`. 
+Before build time, you see no change in target topic content. At build time, the paragraph with `conaction="pushbefore"` instructs the DITA processor to insert the badge defined in this paragraph *before* a target paragraph element. The second paragraph specifies that target element (insertion point) as `<p id="p_first-para"> The badge should be inserted above this paragraph.</p>`. The processed output now includes a badge that was never inserted directly into the topic. 
 
 ![Section with conref push content.](/images/conref-push_2.png)
 
-This would be the location where you would normally insert a section-level badge manually.line with @conaction="mark" specifies the target insertion point, the paragraph with @id="p_first-line".
+This would be the location where you would insert a section-level badge manually. If another team references `Untitled1.dita` without referencing `conrefpush.dita`, the badge never appears in their generated output.  
 
-As with many of these gee-whiz features in DITA, you need to weight the benefits of implementing conref push against the complexity that it introduces. 
+As with many of these gee-whiz features in DITA, you need to weight the benefits of implementing conref push against the complexity that it introduces. Some technical solutions create more governance problems than they are worth. 
 
 ## Conclusion
 
+No one said that solving complex content architecture issues in DITA would be easy. If your organization *does* need to design and implement content badging, hopefully some of the advice and best practices in this whitepper will prove useful. 
+
+OASIS DITA Adoption Technical Committee
+the 
