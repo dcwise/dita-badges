@@ -149,8 +149,8 @@ Where you place badges is part common sense and team preference.
 
 Badge type|Placement options
 ----------|-------------------
-Topic|`<topic id="test1">`<br />`<title>Title</title>`<br />`<shortdesc>Short description</shortdesc>`<br />`<body>`<br />`**<p>Topic badge</p>**`<br />`</body>`<br />`</topic>`<br /><br />`<topic id="test2">`<br />`<title>Title</title>`<br />`<abstract>`<br />`<shortdesc>Short description</shortdesc>`<br />`<p>Topic badge</p>`<br />`</abstract>`<br />. . .
-Section|xxx
+Topic|`<topic id="test1">`<br />`<title>Title</title>`<br />`<shortdesc>Short description</shortdesc>`<br />`<body>`<br />**`<p>Topic badge reference</p>`**<br />`</body>`<br />`</topic>`<br /><br />`<topic id="test2">`<br />`<title>Title</title>`<br />`<abstract>`<br />`<shortdesc>Short description</shortdesc>`<br />**`<p>Topic badge reference</p>`**<br />`</abstract>`<br />. . .
+Section|`<section>`<br />`<title>Section title</title>`<br />**`<p>Section badge reference</p>`**<br />`<p>. . .</p>`<br \>`</section>` 
 
 
 
