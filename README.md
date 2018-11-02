@@ -1,4 +1,4 @@
-# Content Bading in OASIS DITA (FIRST REVIEW)
+# Content Badging in OASIS DITA (FIRST REVIEW)
 
 OASIS DITA Adoption whitepaper on content badging. 
 
