@@ -1,4 +1,4 @@
-# Content Bading in OASIS DITA (FIRST REVIEW)
+# Content Badging in OASIS DITA (FIRST REVIEW)
 
 OASIS DITA Adoption whitepaper on content badging. 
 
@@ -90,9 +90,9 @@ The real challenges with badging involve logic.
  
 ## Badge design and implementation
 
-Logic and planning problems of this sort are best approached visually. Design exercises such as card sorting or affinitization depend upon multiple team members seeing all the variables and iteratively testing various arrangements or groupings. Similarly, making a first, complete pass at designing all the content badges that you might need will accelerate the process of developing and refining the logic of your badging. If you have time to code the badges in a DITA library, that's great -- but sticky notes or 3x5 cards will suffice for team discussions early on. Move the cards around. Tape them to whitebaords. Staple them to printouts of your existing docs. Any exercise that simulates applying a badge to your content and thenasking whether that application makes sense is goodness.
+Logic and planning problems of this sort are best approached visually. Design exercises such as card sorting or affinitization depend upon multiple team members seeing all the variables and iteratively testing various arrangements or groupings. Similarly, making a first, complete pass at designing all the content badges that you might need will accelerate the process of developing and refining the logic of your badging. If you have time to code the badges in a DITA library, that's great -- but sticky notes or 3x5 cards will suffice for team discussions early on. Move the cards around. Tape them to whiteboards. Staple them to printouts of your existing docs. Any exercise that simulates you applying a badge to your content and then asking whether that makes sense is goodness.
 
-Regardless of how you implement badging in DITA, the content badges themselves have four basic components:
+Regardless of how you implement badging in DITA, content badges have four basic components:
 
 Visual cue | Content ID | Content scope | Content switch
 -----------|------------|----------------|--------------------
@@ -119,7 +119,7 @@ If your badges are crisply defined and you apply them logically and consistently
 
 > Unless otherwise indicated with a product badge such as ![Icon cue](/images/badge_cloud-net_small_no.png), all content applies equally to CloudSquared Cloud Compute, Cloud Net, and Cloud Connect. 
 
-This global statement sets the baseline logically. The only badges that the customer should expect to see would be ones that are exclusionary, identifying topics or sections that are *not* applicable to a particular product. The simpler your logic for inserting a badge, the more consistently content developers can apply them and customers can understand them. In this scenario, you do not need to insert any inclusive badges, only exclusive ones. This is not unlike DITA filtering attributes that are designed, generally, to exclude content from processed output. 
+This global statement sets the baseline logically. The only badges that the customer should expect to see would be ones that are exclusionary, identifying topics or sections that are *not* applicable to a particular product. The simpler your logic for inserting badges, the more consistently content developers can apply them and customers can understand them. In this scenario, you do not need to insert any inclusive badges, only exclusive ones. This is not unlike DITA filtering attributes that are designed, generally, to exclude content from processed output. 
   
 ![Tag exclude topic](/images/tag_cloud-compute_not-supported.svg) This topic does not apply to Cloud Compute.
 
@@ -131,7 +131,7 @@ In our use case, you would then require only six badges -- 3 products x 2 scopes
 
 ## Badging and scope 
 
-When we content developers are looking at badged content in a DITA editor, we see where `<topic>` and `<section>` elements begin and end. We see the scope of the element relative to the topic displayed in our DITA editor. Unfortunately these topic and section boundaries are not visible or recoverable to customers. In a running PDF, where does the current "topic" or "section" end? If we chunk multiple source topics so they generate one HTML5 page in output, wouldn't the topic boundaries be misleading? If I insert a topic-level badge to indicate that no content in the topic applies to a particular product, what happens if another writer conref's a section from my topic? That conref'd section has no section badge. Messy stuff. 
+When we content developers are looking at badged content in a DITA editor, we see where `<topic>` and `<section>` elements begin and end. We see the scope of the element relative to the topic displayed in our DITA editor. Unfortunately, these topic and section boundaries are neither visible nor recoverable to customers. In a running PDF, where does the current "topic" or "section" end? If we chunk multiple source topics so they generate one HTML5 page in output, wouldn't the topic boundaries be misleading? If I insert a topic-level badge to indicate that no content in the topic applies to a particular product, what happens if another writer conref's a section from my topic? That conref'd section has no section badge. Messy stuff. 
 
 You need to scope your topic-level or section-level badges to what you expect the customer will see on the page or in a browser, not what we see in our DITA sources. How do you figure that out? You test it out and show it to people in all your generated output formats. 
 
@@ -149,9 +149,9 @@ Once you have normed on your logic and authoring guidelines, apply them to a sma
 * *Support*: "Some customers are not careful readers and tend to ignore subtleties like these badges. They try something that is not appropriate for their product and then call us. Why are we doing this again? It is increasing our workload."
 * *Test engineering*: "When we tested your procedures in the product-specific manuals, we could clearly identify issues with your writing. The new format is interesting, but we are never quite sure whether we are supposed to be testing all product procedures at once or be tiptoeing through the product-specific procedures one at a time." 
 * *Software engineering*: "Sometimes the differences between product features are not binary, not quite so simple as 'supported' or 'not supported'. Some features are "minimally supported" or "mostly supported." 
-* *Sales*: In pre-sales discussions, handing prospective customers manual that documents three products kinda confuses them if they are interesting in buying one."
+* *Sales*: In pre-sales discussions, handing prospective customers manual that documents three products kinda confuses them if they are interested in buying one."
 * *Marketing*: "I didn't realize that the docs would need so many badges. Can you make them smaller or put them in the margin somewhere?"
-* *Legal*: "Our product documentation serves as the definitive product description. If the documentation does not accurately describe the product that the cutomer has purchased, we cannot recognize revenue."
+* *Legal*: "Our product documentation serves as the definitive product description. If the documentation does not accurately describe the product that the customer has purchased, we cannot recognize revenue."
 
 Showing everyone a robust sample of badged documentation generates discussion across the organization about badging and other requirements for product documentation. 
 
@@ -207,7 +207,7 @@ Be practical. Badging is a work-around and will not scale beyond a workgroup. Cl
 
 If you *must* share a badged topic across teams but do not want the badges to appear in all contexts, consider one of the more underutilized reuse mechanisms in DITA, conref push. 
 
-By default, @conrefs and @conkeyrefs "pull" referenced content into the corrent topic. @Conref push and @conkeyref push insert referenced content into a specific location in a target topic. 
+By default, @conrefs and @conkeyrefs "pull" referenced content into the current topic. @Conref push and @conkeyref push insert referenced content into a specific location in a target topic. 
 
 For example, let's say that a topic named `Untitled1.dita` contained the following section.
 
@@ -231,7 +231,7 @@ Set the @processing-role attribute of `conrefpush.dita` to "resource-only" in th
 
 ![Conref push topic processing role.](/images/conref-push_3.png)
 
-Setting this atttribute makes `conrefpush.dita` available to the DITA map and to the DITA processor, but not visible to the customer.  
+Setting this attribute makes `conrefpush.dita` available to the DITA map and to the DITA processor, but not visible to the customer.  
 
 To "push" a badge into `Untitled1.dita` before the section paragraph with `@id="first-para"`, insert the following markup into `conrefpush.dita`. 
 
