@@ -101,6 +101,13 @@ Visual cue | Content ID | Content scope | Content switch
 
 Whether you and your graphic designers choose icons or tags, building a library of reusable DITA badges is straight-forward. Consider starting with just one library for badging, call it `library_content-badges.dita`. 
 
+<dl>
+  <dt>Coffee</dt>
+  <dd>Black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>White cold drink</dd>
+</dl>
+
 Markup | Rendered presentation
 -------|----------------------
 Markup | description x x x x x x x x x 
