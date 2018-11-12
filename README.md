@@ -222,37 +222,7 @@ The following markup places the badge in the first sentence of the `<section>`.
   <p>Running text</p>
 </section>
 ```
-
-
-
-
-
-
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="untitled">
-    <title>Untitled1</title>
-    <abstract>
-        <shortdesc>Short description</shortdesc>
-        <p>Topic badge</p>
-    </abstract>
-    
-    
-    <body>
-    . . . 
-  </body>
-</topic>
-```
-
-
-
-
-Badge type|Placement options
-----------|-------------------
-Topic|This places the badge in the first sentence of the body of the topic.<br />`<topic id="test1">`<br />`<title>Title</title>`<br />`<shortdesc>Short description</shortdesc>`<br />`<body>`<br />**`<p>Topic-level badge reference</p>`**<br />`</body>`<br />`</topic>`<br /><br />This places the badge inside the `<abstract>` element at the beginning of the topic.<br />`<topic id="test2">`<br />`<title>Title</title>`<br />`<abstract>`<br />`<shortdesc>Short description</shortdesc>`<br />**`<p>Topic-level badge reference</p>`**<br />`</abstract>`<br />. . .
-Section|This places the badge in the first sentence of the `<section>`.<br />`<section>`<br />`<title>Section title</title>`<br />**`<p>Section-level badge reference</p>`**<br />`<p>. . .</p>`<br \>`</section>` 
+In this case, consistency is the important thing.
 
 ## Referencing badges in your topics
 
