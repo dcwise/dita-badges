@@ -2,7 +2,9 @@
 
 OASIS DITA Adoption whitepaper on content badging. 
 
-All sample badges and supporting DITA examples are available to clone at `https://github.com/StanDoherty/dita-badges` (need OASIS home). 
+All sample badges and supporting DITA examples are available to clone at `https://github.com/StanDoherty/dita-badges` (need OASIS home). The DITA map referencing stand-alone Markdown topics is `whitepaper_dita-badges.ditamap`. A PDF generated from those hybrid DITA/Markdown soures is available at:
+
+![DITA Badging PDF](/pdf/whitepaper_dita-badges.pdf)
 
 Badging is a popular topic on several fronts. The three most popular forms of badging are:
 
