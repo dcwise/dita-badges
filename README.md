@@ -104,8 +104,10 @@ Whether you and your graphic designers choose icons or tags, building a library 
 <dl>
   <dt>Coffee</dt>
   <dd>Black hot drink</dd>
+  <dd>xxxxx</dd>
   <dt>Milk</dt>
   <dd>White cold drink</dd>
+  <dd>xxxxx</dd>
 </dl>
 
 Markup | Rendered presentation
