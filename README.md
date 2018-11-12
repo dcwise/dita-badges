@@ -101,6 +101,36 @@ Visual cue | Content ID | Content scope | Content switch
 
 Whether you and your graphic designers choose icons or tags, building a library of reusable DITA badges is straight-forward. Consider starting with just one library for badging, call it `library_content-badges.dita`. 
 
+The following markup for a positive badge . . .
+
+ ```xml
+ <p id="p_badge_icon_cloud-connect_section_yes">
+    <image href="images/badge_cloud-connect_small_yes.png">  
+      <alt>This section applies exclusively to Cloud Connect.</alt>
+    </image>
+    <ph> This section applies exclusively to Cloud Connect.</ph>
+ </p>
+ ```
+. . . generates
+
+![Icon rendered](/images/render1.png)
+
+The following markup for a negative badge . . . 
+
+```xml
+<p id="p_badge_tag_cloud-compute_topic_no">
+  <image href="images/tag_cloud-compute_not-supported.svg">
+    <alt>This topic does not apply to Cloud Compute.</alt>
+  </image>
+  <ph> This topic does not apply to Cloud Compute.</ph>
+  </p>
+```
+. . . generates 
+
+![Icon rendered](/images/render2.png)
+
+
+
 <dl>
   <dt>Markup</dt>
   <dd>
