@@ -101,10 +101,33 @@ Visual cue | Content ID | Content scope | Content switch
 
 Whether you and your graphic designers choose icons or tags, building a library of reusable DITA badges is straight-forward. Consider starting with just one library for badging, call it `library_content-badges.dita`. 
 
-Markup | Rendered presentation
--------|----------------------
-`<p id="p_badge_icon_cloud-connect_section_yes">`<br />`  <image href="images/badge_cloud-connect_small_yes.png">`<br />`    <alt>This section applies exclusively to Cloud Connect.</alt>`<br />`  </image>`<br />`  <ph> This section applies exclusively to Cloud Connect.</ph>`<br />`</p>`<br />|![Icon rendered](/images/render1.png)
-`<p id="p_badge_tag_cloud-compute_topic_no">`<br />`<image href="images/tag_cloud-compute_not-supported.svg">`<br />`<alt>This topic does not apply to Cloud Compute.</alt>`<br \>`</image>`<br />`<ph> This topic does not apply to Cloud Compute.</ph>`<br />`</p>`|![Icon rendered](/images/render2.png)
+The following markup for a positive badge . . .
+
+ ```xml
+ <p id="p_badge_icon_cloud-connect_section_yes">
+    <image href="images/badge_cloud-connect_small_yes.png">  
+      <alt>This section applies exclusively to Cloud Connect.</alt>
+    </image>
+    <ph> This section applies exclusively to Cloud Connect.</ph>
+ </p>
+ ```
+. . . generates
+
+![Icon rendered](/images/render1.png)
+
+The following markup for a negative badge . . . 
+
+```xml
+<p id="p_badge_tag_cloud-compute_topic_no">
+  <image href="images/tag_cloud-compute_not-supported.svg">
+    <alt>This topic does not apply to Cloud Compute.</alt>
+  </image>
+  <ph> This topic does not apply to Cloud Compute.</ph>
+</p>
+```
+. . . generates 
+
+![Icon rendered](/images/render2.png)
 
 Time that you spend organizing these badge definitions in a DITA library topic has a big payoff for content developers on your team. If writers can easily find the appropriate badge, they'll thank you -- eventually.  
 
@@ -159,10 +182,47 @@ Showing everyone a robust sample of badged documentation generates discussion ac
 
 Where you place badges is part common sense and part team preference. 
 
-Badge type|Placement options
-----------|-------------------
-Topic|This places the badge in the first sentence of the body of the topic.<br />`<topic id="test1">`<br />`<title>Title</title>`<br />`<shortdesc>Short description</shortdesc>`<br />`<body>`<br />**`<p>Topic-level badge reference</p>`**<br />`</body>`<br />`</topic>`<br /><br />This places the badge inside the `<abstract>` element at the beginning of the topic.<br />`<topic id="test2">`<br />`<title>Title</title>`<br />`<abstract>`<br />`<shortdesc>Short description</shortdesc>`<br />**`<p>Topic-level badge reference</p>`**<br />`</abstract>`<br />. . .
-Section|This places the badge in the first sentence of the `<section>`.<br />`<section>`<br />`<title>Section title</title>`<br />**`<p>Section-level badge reference</p>`**<br />`<p>. . .</p>`<br \>`</section>` 
+### Topic placement
+
+The following markup places the badge in the first sentence of the body of the topic.
+
+```xml
+<topic id="test1">
+  <title>Topic title</title>
+  <shortdesc>Short description</shortdesc>
+  <body>
+  <p>Topic-level badge reference</p>
+  </body>
+</topic>
+```
+
+This markup places the badge inside the `<abstract>` element at the beginning of the topic.
+
+```xml
+<topic id="test2">
+  <title>Topic title</title>
+  <abstract>
+    <shortdesc>Short description</shortdesc>
+    <p>Topic-level badge reference</p>
+  </abstract>
+  <body>
+    <p>Running text</p>
+  </body>
+</topic>
+```
+
+### Section placement
+
+The following markup places the badge in the first sentence of the `<section>`.
+
+```xml
+<section>
+  <title>Section title</title>
+  <p>Section-level badge reference</p>
+  <p>Running text</p>
+</section>
+```
+In this case, consistency is the important thing.
 
 ## Referencing badges in your topics
 
