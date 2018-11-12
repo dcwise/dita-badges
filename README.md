@@ -114,7 +114,8 @@ Whether you and your graphic designers choose icons or tags, building a library 
 Markup | Rendered presentation
 -------|----------------------
 Markup | description x x x x x x x x x 
-<code>
+<pre>xxx</pre> | next
+<code>&nbsp;
 xxxxx
  yyyy
  zzzz </code> | new column
