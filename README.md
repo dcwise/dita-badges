@@ -103,14 +103,15 @@ Whether you and your graphic designers choose icons or tags, building a library 
 
 <dl>
   <dt>Markup</dt>
-  <dd>```xml
-  <p id="p_badge_icon_cloud-connect_section_yes">
-     <image href="images/badge_cloud-connect_small_yes.png">  
-       <alt>This section applies exclusively to Cloud Connect.</alt>
-     </image>
-     <ph> This section applies exclusively to Cloud Connect.</ph>
-  </p>
-  ```
+  <dd>
+ ```xml
+ <p id="p_badge_icon_cloud-connect_section_yes">
+    <image href="images/badge_cloud-connect_small_yes.png">  
+      <alt>This section applies exclusively to Cloud Connect.</alt>
+    </image>
+    <ph> This section applies exclusively to Cloud Connect.</ph>
+ </p>
+ ```
   </dd>
   <dd>xxxxx</dd>
   <dt>Milk</dt>
