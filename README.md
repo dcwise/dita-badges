@@ -182,6 +182,27 @@ Showing everyone a robust sample of badged documentation generates discussion ac
 
 Where you place badges is part common sense and part team preference. 
 
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="untitled">
+    <title>Untitled1</title>
+    <abstract>
+        <shortdesc>Short description</shortdesc>
+        <p>Topic badge</p>
+    </abstract>
+    
+    
+    <body>
+    . . . 
+  </body>
+</topic>
+```
+
+
+
+
 Badge type|Placement options
 ----------|-------------------
 Topic|This places the badge in the first sentence of the body of the topic.<br />`<topic id="test1">`<br />`<title>Title</title>`<br />`<shortdesc>Short description</shortdesc>`<br />`<body>`<br />**`<p>Topic-level badge reference</p>`**<br />`</body>`<br />`</topic>`<br /><br />This places the badge inside the `<abstract>` element at the beginning of the topic.<br />`<topic id="test2">`<br />`<title>Title</title>`<br />`<abstract>`<br />`<shortdesc>Short description</shortdesc>`<br />**`<p>Topic-level badge reference</p>`**<br />`</abstract>`<br />. . .
