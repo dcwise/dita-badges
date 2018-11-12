@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Whitepaper: DITA Badges</title>
+    <topicref href="badges_intro.md" format="markdown">
+        <topicref href="badges_typical-use--case.md" format="markdown"/>
+        <topicref href="badges_badge-design-and-implementation.md" format="markdown"/>
+        <topicref href="badges_establishing-logic.md" format="markdown"/>
+        <topicref href="badges_scope.md" format="markdown"/>
+        <topicref href="badges_test-drive.md" format="markdown"/>
+        <topicref href="badges_placement.md" format="markdown"/>
+        <topicref href="badges_referencing-basic.md" format="markdown"/>
+        <topicref href="badges_referencing-shared.md" format="markdown"/>
+        <topicref href="badges_conclusion.md" format="markdown"/>
+    </topicref>
+</map>
