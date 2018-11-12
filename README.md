@@ -123,7 +123,7 @@ The following markup for a negative badge . . .
     <alt>This topic does not apply to Cloud Compute.</alt>
   </image>
   <ph> This topic does not apply to Cloud Compute.</ph>
-  </p>
+</p>
 ```
 . . . generates 
 
@@ -191,7 +191,7 @@ The following markup places the badge in the first sentence of the body of the t
   <title>Topic title</title>
   <shortdesc>Short description</shortdesc>
   <body>
-    **<p>Topic-level badge reference</p>**
+  <p>Topic-level badge reference</p>
   </body>
 </topic>
 ```
@@ -203,7 +203,7 @@ This markup places the badge inside the `<abstract>` element at the beginning of
   <title>Topic title</title>
   <abstract>
     <shortdesc>Short description</shortdesc>
-    **<p>Topic-level badge reference</p>**
+    <p>Topic-level badge reference</p>
   </abstract>
   <body>
     <p>Running text</p>
@@ -218,7 +218,7 @@ The following markup places the badge in the first sentence of the `<section>`.
 ```xml
 <section>
   <title>Section title</title>
-  **<p>Section-level badge reference</p>**
+  <p>Section-level badge reference</p>
   <p>Running text</p>
 </section>
 ```
