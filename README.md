@@ -103,6 +103,13 @@ Whether you and your graphic designers choose icons or tags, building a library 
 
 Markup | Rendered presentation
 -------|----------------------
+```xml
+xx
+  xx
+    xx
+```|test
+
+
 `<p id="p_badge_icon_cloud-connect_section_yes">`<br />`  <image href="images/badge_cloud-connect_small_yes.png">`<br />`    <alt>This section applies exclusively to Cloud Connect.</alt>`<br />`  </image>`<br />`  <ph> This section applies exclusively to Cloud Connect.</ph>`<br />`</p>`<br />|![Icon rendered](/images/render1.png)
 `<p id="p_badge_tag_cloud-compute_topic_no">`<br />`<image href="images/tag_cloud-compute_not-supported.svg">`<br />`<alt>This topic does not apply to Cloud Compute.</alt>`<br \>`</image>`<br />`<ph> This topic does not apply to Cloud Compute.</ph>`<br />`</p>`|![Icon rendered](/images/render2.png)
 
