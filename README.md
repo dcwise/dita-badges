@@ -104,12 +104,10 @@ Whether you and your graphic designers choose icons or tags, building a library 
 Markup | Rendered presentation
 -------|----------------------
 Markup | description x x x x x x x x x 
-```xml
-xx
-  xx
-    xx
-``` 
-|test
+    xxxxx
+    yyyy
+    zzzz | new column
+xxx|test
 
 
 `<p id="p_badge_icon_cloud-connect_section_yes">`<br />`  <image href="images/badge_cloud-connect_small_yes.png">`<br />`    <alt>This section applies exclusively to Cloud Connect.</alt>`<br />`  </image>`<br />`  <ph> This section applies exclusively to Cloud Connect.</ph>`<br />`</p>`<br />|![Icon rendered](/images/render1.png)
