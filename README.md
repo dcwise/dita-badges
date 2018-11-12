@@ -110,12 +110,14 @@ Whether you and your graphic designers choose icons or tags, building a library 
   <dd>xxxxx</dd>
 </dl>
 
+
 Markup | Rendered presentation
 -------|----------------------
 Markup | description x x x x x x x x x 
-    xxxxx
-    yyyy
-    zzzz | new column
+<code>
+xxxxx
+ yyyy
+ zzzz </code> | new column
 xxx|test
 
 
