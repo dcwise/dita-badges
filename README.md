@@ -129,41 +129,6 @@ The following markup for a negative badge . . .
 
 ![Icon rendered](/images/render2.png)
 
-
-
-<dl>
-  <dt>Markup</dt>
-  <dd>
- ```xml
- <p id="p_badge_icon_cloud-connect_section_yes">
-    <image href="images/badge_cloud-connect_small_yes.png">  
-      <alt>This section applies exclusively to Cloud Connect.</alt>
-    </image>
-    <ph> This section applies exclusively to Cloud Connect.</ph>
- </p>
- ```
-  </dd>
-  <dd>xxxxx</dd>
-  <dt>Milk</dt>
-  <dd>White cold drink</dd>
-  <dd>xxxxx</dd>
-</dl>
-
-
-Markup | Rendered presentation
--------|----------------------
-Markup | description x x x x x x x x x 
-<pre>xxx</pre> | next
-<code>&nbsp;
-xxxxx
- yyyy
- zzzz </code> | new column
-xxx|test
-
-
-`<p id="p_badge_icon_cloud-connect_section_yes">`<br />`  <image href="images/badge_cloud-connect_small_yes.png">`<br />`    <alt>This section applies exclusively to Cloud Connect.</alt>`<br />`  </image>`<br />`  <ph> This section applies exclusively to Cloud Connect.</ph>`<br />`</p>`<br />|![Icon rendered](/images/render1.png)
-`<p id="p_badge_tag_cloud-compute_topic_no">`<br />`<image href="images/tag_cloud-compute_not-supported.svg">`<br />`<alt>This topic does not apply to Cloud Compute.</alt>`<br \>`</image>`<br />`<ph> This topic does not apply to Cloud Compute.</ph>`<br />`</p>`|![Icon rendered](/images/render2.png)
-
 Time that you spend organizing these badge definitions in a DITA library topic has a big payoff for content developers on your team. If writers can easily find the appropriate badge, they'll thank you -- eventually.  
 
 ![Badge library entries](/images/library1.png)
