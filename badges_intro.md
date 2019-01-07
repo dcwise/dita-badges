@@ -1,16 +1,22 @@
 # Content Badging in OASIS DITA (FIRST REVIEW)
 
-OASIS DITA Adoption whitepaper on content badging. 
+This repo contains draft content for an OASIS DITA Adoption whitepaper on content badging. 
 
-All sample badges and supporting DITA examples are available to clone at `https://github.com/StanDoherty/dita-badges` (need OASIS home). 
+You can clone or download all the sample badges and the supporting DITA examples at:
+
+`https://github.com/StanDoherty/dita-badges`.
+
+The DITA map referencing stand-alone Markdown topics is `whitepaper_dita-badges.ditamap`. A PDF generated from those hybrid DITA/Markdown soures is available at:
+
+![DITA Badging PDF](pdf/whitepaper_dita-badges.pdf)
 
 Badging is a popular topic on several fronts. The three most popular forms of badging are:
 
-* *Achievement badging*: Organizations set up collections of social media "badges" to recognize the involvement and achievement in employees, partners, and customers. Imagine if someone developed a technical certification program for DITA and awarded badges to program participants who passed tests for particular features.  
+* *Achievement badging*: Organizations set up collections of social media "badges" to recognize the involvement and achievement of employees, partners, and customers. Imagine if someone developed a technical certification program for DITA and awarded badges to program participants who have passed tests for particular DITA features.  
 
   ![DITA conref push expert](./images/badge_dita_conref-push.png)  ![DITA reltables expert](./images/badge_dita_reltables.png)  ![DITA scoped keys expert](./images/badge_dita_scopedkeys.png)
 
-* *Status badging*: Collaborative development platforms allow administrators to incorporate macros in their portal pages that display the current status of builds, workflow stages, contributions, and test coverage.
+* *Status badging*: Collaborative development platforms such as GitHub allow administrators to add macros to portal pages that display the current status of builds, workflow stages, contributions, and test coverage.
 
   ![Test status](./images/badge_tests_pass-fail.svg)
   
@@ -32,4 +38,4 @@ Badging is a popular topic on several fronts. The three most popular forms of ba
   
   ![Applicable only to Cloud Compute](./images/tag_cloud-compute_supported.svg) This topic applies exclusively to Cloud Compute. 
 
-Content badging is a medium- to high-risk content strategy for compound publications, that is, publications that document more than one product or version.
+Content badging is a medium- to high-risk content strategy for compound publications, that is, publications documenting more than one product or version.
