@@ -6,7 +6,7 @@ Be practical. Badging is a work-around and will not scale beyond a workgroup. Cl
 
 If you *must* share a badged topic across teams but do not want the badges to appear in all contexts, consider one of the more underutilized reuse mechanisms in DITA, conref push. 
 
-By default, @conrefs and @conkeyrefs "pull" referenced content into the current topic. @Conref push and @conkeyref push insert referenced content into a specific location in a target topic. 
+By default, @conrefs and @conkeyrefs "pull" referenced content into the current topic. Conref push and conkeyref push (insert) referenced content into a specific location in a target topic. 
 
 For example, let's say that a topic named `Untitled1.dita` contained the following section.
 
