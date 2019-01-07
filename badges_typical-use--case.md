@@ -8,15 +8,15 @@ A year later CloudSquared releases Cloud Net Monitoring so the content developme
 
 ![Use case - two products](./images/use-case_2.png)
 
-Content developers assign filtering attributes such as `@product="cloud-compute"` or `@product="cloud-net"` to topics, sections, or elements that need to be filtered OUT of a product-specific deliverable. 
+Content developers assign filtering attributes such as `product="cloud-compute"` or `product="cloud-net"` to topics, sections, or elements that need to be filtered OUT of a product-specific deliverable. 
 
 The following year, CloudSquared releases Cloud Connect and completes the monitoring suite. The writing team then uses conditional filtering to publish three separate publications. 
 
 ![Use case - three products](./images/use-case_3.png)
 
-Content developers add the filtering attribute `@product="cloud-connect"` to those topics, sections, or elements that need to be filtered OUT of the other two product-specific deliverables. 
+Content developers add the filtering attribute `product="cloud-connect"` to those topics, sections, or elements that need to be filtered OUT of the other two product-specific deliverables. 
 
-Six months after this launch, Marketing receives feedback that emphasizing common design and services across the three suite components will enhance customer perception that CloudSquared can consolidate its achievements and move on to new product lines. Toward that end, Product Management requests that the content development team consolidate the three, product-specific publications into one, multi-product publication. All generic and product-specific information would need to appear in the same deliverable.
+Six months after this launch, Marketing receives feedback that emphasizing common design and services across the three suite components will enhance customer perception that CloudSquared can consolidate its achievements and move on to new product lines. Toward that end, Product Management requests that the content development team consolidate the three, product-specific publications into one, multi-product publication. Both generic and product-specific information would need to appear in the same deliverable.
 
 ![Use case - one combined product](./images/use-case_4.png)
 
@@ -25,7 +25,7 @@ When transitioning from conditional filtering to badging, note that filtering me
 Filtering markup in a topic: 
 
 ```xml
-<p @product="cloud-connect">Cloud Connect is great.</p>
+<p product="cloud-connect">Cloud Connect is great.</p>
 ```
 
 Filtering markup in a DITAVAL script:
@@ -48,4 +48,4 @@ Badging markup:
 
 Filtering does a brilliant job supporting a many-to-one relationship between source content and delivered content. Many product-specific variations are filtered out to produce that one product-specific deliverable. Badging involves a many-to-many relationship. All the product-specific variations in the sources need to be accounted for in a multi-product deliverable.   
 
-The real challenges with badging involve logic. 
+The real challenges with badging involve logic.  
