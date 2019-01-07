@@ -6,27 +6,26 @@ Regardless of how you implement badging in DITA, content badges have four basic 
 
 Visual cue | Content ID | Content scope | Content switch
 -----------|------------|----------------|--------------------
-![Icon cue](./images/badge_cloud-net_small_yes.png)|Cloud Net|This section | applies to . . . 
-![Icon cue](./images/badge_cloud-net_small_no.png)|Cloud Net|This topic  | does not apply to . . . 
+![Icon cue](./images/badge_cloud-net_small_yes.png)<br />![Tag cue](./images/cue_tags.png)|Cloud Net|This section | applies to . . . 
+![Icon cue](./images/badge_cloud-net_small_no.png)<br />![Tag cue](./images/cue_tags.png)|Cloud Net|This topic  | does not apply to . . . 
 
 Whether you and your graphic designers choose icons or tags, building a library of reusable DITA badges is straight-forward. Consider starting with just one library for badging, call it `library_content-badges.dita`. 
 
-The following markup for a positive badge . . .
+Here is some markup for a positive badge . . .
 
-```xml
-<p id="p_badge_icon_cloud-connect_section_yes">
+ ```xml
+ <p id="p_badge_icon_cloud-connect_section_yes">
     <image href="images/badge_cloud-connect_small_yes.png">  
       <alt>This section applies exclusively to Cloud Connect.</alt>
     </image>
     <ph> This section applies exclusively to Cloud Connect.</ph>
-</p>
-```
-
-. . . generates this badge in output. 
+ </p>
+ ```
+. . . and generates
 
 ![Icon rendered](./images/render1.png)
 
-The following markup for a negative badge . . . 
+The following markup defines a negative badge . . . 
 
 ```xml
 <p id="p_badge_tag_cloud-compute_topic_no">
@@ -36,8 +35,7 @@ The following markup for a negative badge . . .
   <ph> This topic does not apply to Cloud Compute.</ph>
 </p>
 ```
-
-. . . generates this badge in output. 
+. . . and generates 
 
 ![Icon rendered](./images/render2.png)
 
