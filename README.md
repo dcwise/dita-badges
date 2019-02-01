@@ -115,9 +115,9 @@ There is no technical solution in the XML markup. Consider the following best pr
 
 2. Avoid generic, unscoped badges. Design your badges to have a specific granularity (scope), for example by topic, by section/step, or by element.
 
-  **Caution**: Although it is technically possible to create badges scoped to the level of DITA block and inline elements, many teams avoid granular badging for practical reasons -- maintenance.
+   **Caution**: Although it is technically possible to create badges scoped to the level of DITA block and inline elements, many teams avoid granular badging for practical reasons -- maintenance.
  
-  Practically, attempting to use the same badges for elements that you use for topics or sections can create a visual and logical train wreck. Teams that have successfully worked with badged documentation for multiple releases turn to `<note>` elements or in-line explanations for anything more granular than sections. Others use DITA flagging to color-code platform-specific, inline information.
+   Practically, attempting to use the same badges for elements that you use for topics or sections can create a visual and logical train wreck. Teams that have successfully worked with badged documentation for multiple releases turn to `<note>` elements or in-line explanations for anything more granular than sections. Others use DITA flagging to color-code platform-specific, inline information.
 
 1. Create and maintain formal specifications.   
 
