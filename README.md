@@ -1,4 +1,4 @@
-# Content Badging in OASIS DITA (FIRST REVIEW)
+# Content Badging in OASIS DITA (SECOND REVIEW)
 
 This repo contains draft content for an OASIS DITA Adoption whitepaper on content badging. 
 
@@ -6,11 +6,11 @@ You can clone or download all the sample badges and the supporting DITA examples
 
 `https://github.com/StanDoherty/dita-badges`.
 
-The DITA map referencing stand-alone Markdown topics is `whitepaper_dita-badges.ditamap`. A PDF generated from those hybrid DITA/Markdown soures is available at:
+The DITA map referencing stand-alone Markdown topics is `whitepaper_dita-badges.ditamap`. A PDF generated from those hybrid DITA/Markdown sources is available at:
 
 ![DITA Badging PDF](pdf/whitepaper_dita-badges.pdf)
 
-Badging is a popular topic on several fronts. The three most popular forms of badging are:
+Badging in general is a popular topic. The three most popular forms of badging are:
 
 * *Achievement badging*: Organizations set up collections of social media "badges" to recognize the involvement and achievement of employees, partners, and customers. Imagine if someone developed a technical certification program for DITA and awarded badges to program participants who have passed tests for particular DITA features.  
 
@@ -38,7 +38,7 @@ Badging is a popular topic on several fronts. The three most popular forms of ba
   
   ![Applicable only to Cloud Compute](./images/tag_cloud-compute_supported.svg) This topic applies exclusively to Cloud Compute. 
 
-Content badging is a medium- to high-risk content strategy for compound publications, that is, publications documenting more than one product or version.
+Content badging allows writing teams to "tag" content as applicable or inapplicable to a specific technology, product, release level, or audience. 
 
 
 ## A typical use case for content badging
@@ -75,48 +75,137 @@ Filtering markup in a DITAVAL script:
 
 ```xml
 <val>
-   <prop att="product" val="cloud-connect" action="exclude" />
+   <prop att="product" val="cloud-compute" action="exclude" />
+   <prop att="product" val="cloud-net" action="exclude" />
+   <prop att="product" val="cloud-connect" action="include" />
 </val>
 ```
 
-Badging markup: 
+DITA filtering does a brilliant job supporting a one-to-many relationship between source content and generated content. One DITA source topic tagged with multiple filtering attribute values can generate multiple, distinct versions of itself. The logic for content badging involves a one-to-one relationship between a source topic and its generated version. All the "badges" or badging metadata that you need to include in that one, multi-platform or multi-product version of a topic must be  included in the one source DITA topic *and* included in generated output topic.    
 
-```xml
-<p id="p_badge_icon_cloud-connect_section_yes">
-  <image href="images/badge_cloud-connect_small_yes.png"></image>
-  <ph>This section applies exclusively to Cloud Connect.</ph>
-</p>
-<p>Cloud Connect is great.</p>
-```
+The logic that you used in designing DITA filtering is transferable to the logic for DITA content badging.
 
-Filtering does a brilliant job supporting a many-to-one relationship between source content and delivered content. Many product-specific variations are filtered out to produce that one product-specific deliverable. Badging involves a many-to-many relationship. All the product-specific variations in the sources need to be accounted for in a multi-product deliverable.   
+## Establishing logic for your badges
 
-The real challenges with badging involve logic. 
+Incomplete or fuzzy standards around the logic of badging is the most frequent reason that it fails in content development organizations. Investing in crisp specifications with practical examples is critical. 
 
+### Global statements about non-badged content
+
+The first step toward providing logic for your publication is having a global statement about non-badged content.
+
+> Unless otherwise indicated with a product badge such as ![Icon cue](./images/badge_cloud-net_small_no.png), all content applies equally to CloudSquared Cloud Compute, Cloud Net, and Cloud Connect. 
+
+This global statement sets the baseline logically. The only badges that the customer should expect to see would be ones that are exclusionary, identifying topics or sections that are *not* applicable to a particular product. The simpler your logic for inserting badges, the more consistently content developers can apply them and customers can understand them. In this scenario, you do not need to insert any inclusive badges, only exclusive ones. This is not unlike DITA filtering attributes that are designed, generally, to exclude content from processed output. 
+  
+![Tag exclude topic](./images/tag_cloud-compute_not-supported.svg) This topic does not apply to Cloud Compute.
+
+![Tag exclude topic](./images/tag_cloud-net_not-supported.svg) This section does not apply to Cloud Net.
+
+![Tag exclude topic](./images/tag_cloud-connect_not-supported.svg) This topic does not apply to Cloud Connect.
+
+In our use case, you would then require only six badges -- 3 products x 2 scopes (topic or section).
+
+### Badging and scope 
+
+When we content developers are working in our DITA editor and are identifying elements that we want to badge, we see where `<topic>` and `<section>` elements begin and end. We see the scope of the element relative to the topic displayed in our DITA editor. Unfortunately, these topic and section boundaries are neither visible nor recoverable to customers. In a running PDF, where does the current "topic" or "section" end? If we chunk multiple source topics so they generate one HTML5 page in output, wouldn't the topic boundaries be misleading? If I set a topic-level badge to indicate that no content in the topic applies to a particular product, what happens if another writer conref's a section from my topic? That conref'd section has no section badge. Messy stuff. 
+
+There is no technical solution in the XML markup. Consider the following best practices when defining the scope of each badge.
+
+1. Conduct formal tests of your content and the boundaries of what you want to badge. Use colored highlighters on paper to test your collective understanding and alignment. 
+
+2. Avoid generic, unscoped badges. Design your badges to have a specific granularity (scope), for example by topic, by section/step, or by element.
+
+  **Caution**: Although it is technically possible to create badges scoped to the level of DITA block and inline elements, many teams avoid granular badging for practical reasons -- maintenance.
  
-## Badge design and implementation
+  Practically, attempting to use the same badges for elements that you use for topics or sections can create a visual and logical train wreck. Teams that have successfully worked with badged documentation for multiple releases turn to `<note>` elements or in-line explanations for anything more granular than sections. Others use DITA flagging to color-code platform-specific, inline information.
+
+1. Create and maintain formal specifications.   
+
+## Badge design components
 
 Logic and planning problems of this sort are best approached visually. Design exercises such as card sorting or affinitization depend upon multiple team members seeing all the variables and iteratively testing various arrangements or groupings. Similarly, making a first, complete pass at designing all the content badges that you might need will accelerate the process of developing and refining the logic of your badging. If you have time to code the badges in a DITA library, that's great -- but sticky notes or 3x5 cards will suffice for team discussions early on. Move the cards around. Tape them to whiteboards. Staple them to printouts of your existing docs. Any exercise that simulates you applying a badge to your content and then asking whether that makes sense is goodness.
 
-Regardless of how you implement badging in DITA, content badges have four basic components:
+Although there are multiple ways to implement content badging in DITA, the badges themselves share  some common building blocks:
 
-Visual cue | Content ID | Content scope | Content switch
------------|------------|----------------|--------------------
-![Icon cue](./images/badge_cloud-net_small_yes.png)<br />![Tag cue](./images/cue_tags.png)|Cloud Net|This section | applies to . . . 
-![Icon cue](./images/badge_cloud-net_small_no.png)<br />![Tag cue](./images/cue_tags.png)|Cloud Net|This topic  | does not apply to . . . 
+Visual cue | Content ID | Content scope | Text (switch) | Flagging attribute
+-----------|------------|---------------|---------------- | ----
+![Icon cue](./images/badge_cloud-net_small_yes.png)<br />![Tag cue](./images/cue_tags.png)|Cloud Net|This section | applies to . . . | @product
+![Icon cue](./images/badge_cloud-net_small_no.png)<br />![Tag cue](./images/cue_tags.png)|Cloud Net|This topic  | does not apply to . . . | @product
 
-Whether you and your graphic designers choose icons or tags, building a library of reusable DITA badges is straight-forward. Consider starting with just one library for badging, call it `library_content-badges.dita`. 
+
+
+## Badge implementation options 
+
+Once you have identified your design components. There are two general approaches for implementing badges, DITA flagging and DITA library references. They are not, by the way, mutually exclusive. 
+
+### DITA flagging 
+  
+If you can "badge" content variations with *either* an icon *or* a text string, DITA flagging is the recommended approach. Define these flagging badges in your DITAVAL files. 
+
+```xml
+<val>
+  <!-- The following two badges insert an icon at the beginning of the flagged content -->
+  <!-- with the alt-text string appearing as hover or alt-reader text. -->    
+  <prop att="product" action="flag" val="cloud-compute-yes-section">
+      <startflag imageref="images/badge_cloud-compute-yes-section.png">
+        <alt-text>This section applies to the CloudSquared Cloud Compute product.</alt-text>
+      </startflag>
+  </prop>
+  <prop att="product" action="flag" val="cloud-compute-no-section">
+      <startflag imageref="images/badge_cloud-compute-no-section.png">
+        <alt-text>This section does not apply to the CloudSquared Cloud Compute product.</alt-text>
+      </startflag>
+  </prop>
+
+  <!-- The next two badges insert the alt-text string at the beginning of the flagged content. -->
+  <prop att="product" action="flag" val="cloud-net-yes-section">
+      <startflag>
+        <alt-text>[Cloud Net supported] </alt-text>
+      </startflag>
+  </prop>
+  <prop att="product" action="flag" val="cloud-net-no-section">
+      <startflag>
+        <alt-text>[Cloud Net not supported] </alt-text>
+      </startflag>
+  </prop>
+</val>
+
+```
+
+DITA flagging has the additional benefit of supporting multiple values for flagging attributes. In the following example, the <p> element is badged for both cloud-compute-yes-section and cloud-net-yes-section.    
+
+```xml
+<p product="cloud-compute-yes-section cloud-net-yes-section">
+Contact Customer Support for Patch-2019-2335.
+</p>
+```
+ 
+DITA processors *should* generate two instances of the badge icon or badge text at the beginning of the targeted element. This technique may be the only way with DITA flagging to generate *both* an icon and a text message.    
+
+### DITA library references 
+
+DITA flagging is preferable, but not possible in all circumstances:
+
+* Your legacy CCMS does not support flagging.
+* The transforms that you use are buggy or do not support flagging.
+* You do not have control over your DITAVAL files or publishing pipeline.
+* Some of your sources are in non-XML formats such as Markdown or HTML5.     
+
+The brute-force method of building libraries of content badges and then referencing them from your DITA topics is an option.
+ 
+Start by building a library of reusable DITA badges, call it `library_content-badges.dita`. 
 
 Here is some markup for a positive badge . . .
 
- ```xml
- <p id="p_badge_icon_cloud-connect_section_yes">
+```xml
+<p id="p_badge_icon_cloud-connect_section_yes">
     <image href="images/badge_cloud-connect_small_yes.png">  
       <alt>This section applies exclusively to Cloud Connect.</alt>
     </image>
     <ph> This section applies exclusively to Cloud Connect.</ph>
- </p>
- ```
+</p>
+```
+
 . . . and generates
 
 ![Icon rendered](./images/render1.png)
@@ -142,33 +231,6 @@ Time that you spend organizing these badge definitions in a DITA library topic h
 ![Badge library entries](./images/library2.png)
 
 
-## Establishing logic
-
-If your badges are crisply defined and you apply them logically and consistently to your content, badging works. The first step toward providing logic for your publication is having a global statement about non-badged content.
-
-> Unless otherwise indicated with a product badge such as ![Icon cue](./images/badge_cloud-net_small_no.png), all content applies equally to CloudSquared Cloud Compute, Cloud Net, and Cloud Connect. 
-
-This global statement sets the baseline logically. The only badges that the customer should expect to see would be ones that are exclusionary, identifying topics or sections that are *not* applicable to a particular product. The simpler your logic for inserting badges, the more consistently content developers can apply them and customers can understand them. In this scenario, you do not need to insert any inclusive badges, only exclusive ones. This is not unlike DITA filtering attributes that are designed, generally, to exclude content from processed output. 
-  
-![Tag exclude topic](./images/tag_cloud-compute_not-supported.svg) This topic does not apply to Cloud Compute.
-
-![Tag exclude topic](./images/tag_cloud-net_not-supported.svg) This section does not apply to Cloud Net.
-
-![Tag exclude topic](./images/tag_cloud-connect_not-supported.svg) This topic does not apply to Cloud Connect.
-
-In our use case, you would then require only six badges -- 3 products x 2 scopes (topic or section).
-
-## Badging and scope 
-
-When we content developers are looking at badged content in a DITA editor, we see where `<topic>` and `<section>` elements begin and end. We see the scope of the element relative to the topic displayed in our DITA editor. Unfortunately, these topic and section boundaries are neither visible nor recoverable to customers. In a running PDF, where does the current "topic" or "section" end? If we chunk multiple source topics so they generate one HTML5 page in output, wouldn't the topic boundaries be misleading? If I insert a topic-level badge to indicate that no content in the topic applies to a particular product, what happens if another writer conref's a section from my topic? That conref'd section has no section badge. Messy stuff. 
-
-You need to scope your topic-level or section-level badges to what you expect the customer will see on the page or in a browser, not what we see in our DITA sources. How do you figure that out? You test it out and show it to people in all your generated output formats. 
-
-Is it technically possible to create badges scoped to the level of DITA elements, for example paragraphs, figures, table rows, or phrases? Yes. 
-
-Practically, attempting to use the same badges for elements that you use for topics or sections can create a visual and logical train wreck. Teams that have successfully worked with badged documentation for multiple releases turn to `<note>` elements or in-line explanations for anything more granular than sections. Others use DITA flagging to color-code platform-specific information. 
-
-Document the logic and the scoping of your badging strategy. 
 
 ## Going on a test drive 
 
@@ -184,11 +246,34 @@ Once you have normed on your logic and authoring guidelines, apply them to a sma
 
 Showing everyone a robust sample of badged documentation generates discussion across the organization about badging and other requirements for product documentation. 
 
-## Placing badges in your topics
+## Badge placement options 
 
-Where you place badges is part common sense and part team preference. 
+Where you tag or insert badge references is part common sense and part team preference. 
 
-### Topic placement
+### Attribute tagging for DITA flagging
+
+If you are using DITA flagging to implement badging, you need to place the flagging attribute value in the first content-bearing element of the "badged" content. 
+
+```xml
+<body>
+  <p product="cloud-net-yes-body">First paragraph.</p>
+  <p>Running text</p>
+</body>
+```
+
+```xml
+<section>
+  <title>Security considerations</title>
+  <p product="cloud-net-yes-section">Running text</p>
+</sections>
+```
+
+Tagging non-content-bearing elements such as <body> or <section> will not generate flagged (badged) output. 
+ 
+ 
+### Library references for topics
+
+The same principle applies to inserting references to badging libraries. 
 
 The following markup places the badge in the first sentence of the body of the topic.
 
@@ -197,19 +282,20 @@ The following markup places the badge in the first sentence of the body of the t
   <title>Topic title</title>
   <shortdesc>Short description</shortdesc>
   <body>
-  <p>Topic-level badge reference</p>
+   <p conref="library_content-badges.dita#badge-lib/p_badge_tag_cloud-compute_topic_no"/>
+   <p>Running text.</p>
   </body>
 </topic>
 ```
 
-This markup places the badge inside the `<abstract>` element at the beginning of the topic.
+The following markup places the same badge inside the `<abstract>` element at the beginning of the topic.
 
 ```xml
 <topic id="test2">
   <title>Topic title</title>
   <abstract>
     <shortdesc>Short description</shortdesc>
-    <p>Topic-level badge reference</p>
+    <p conref="library_content-badges.dita#badge-lib/p_badge_tag_cloud-compute_topic_no"/>
   </abstract>
   <body>
     <p>Running text</p>
@@ -217,7 +303,7 @@ This markup places the badge inside the `<abstract>` element at the beginning of
 </topic>
 ```
 
-### Section placement
+### Library references for sections
 
 The following markup places the badge in the first sentence of the `<section>`.
 
@@ -230,7 +316,7 @@ The following markup places the badge in the first sentence of the `<section>`.
 ```
 In this case, consistency is the important thing.
 
-## Referencing badges in your topics
+### Conref and keyref references to badge libraries
 
 If you have built a library for your badges and assigned each of them a unique ID, you can use @conref or @conkeyref to insert them by reference them into your current topic. 
 
@@ -265,7 +351,7 @@ You can then reference the badge using @conkeyref (indirect referencing).
 
 The @conref and @conkeyref mechanisms reference the same badge definition in the same badge library file. Using indirect, key-based references is a wise investment because it will provide you with flexibility in managing multiple badge library files down the road. Change the key definition once, all @conkeyref references inherit the new badge definition automatically.
 
-## Referencing badges in shared topics
+### Conref/keyref push references to badge libraries
 
 What happens when the badged topics that support your three-product context get referenced by someone from another product group? At a minimum, they'll get a build error (missing key or reference). Ultimately their customers will not understand what is going on. 
 
@@ -317,10 +403,10 @@ Before build time, you see no change in target topic content. At build time, the
 
 This would be the location where you would insert a section-level badge manually. If another team references `Untitled1.dita` without referencing `conrefpush.dita`, the badge never appears in their generated output.  
 
-As with many of these gee-whiz features in DITA, you need to weigh the benefits of implementing conref push against the complexity that it introduces. Some technical solutions create more governance problems than they are worth. 
+Conref push is an acquired taste. You need to weigh the benefits of implementing conref push against the complexity that it introduces. Some technical solutions create more governance problems than they are worth. 
 
 ## Conclusion
 
-No one said that solving complex content architecture issues in DITA would be easy. If your organization *does* need to design and implement content badging, hopefully some of the advice and best practices in this whitepaper will prove useful. 
+If your organization has a business need to consolidate multiple, related publications into one multi-platform or multi-product publication, then you may find many of these best practices for content badges to be useful.  
 
 OASIS DITA Adoption Technical Committee

@@ -10,4 +10,4 @@ Once you have normed on your logic and authoring guidelines, apply them to a sma
 * *Marketing*: "I didn't realize that the docs would need so many badges. Can you make them smaller or put them in the margin somewhere?"
 * *Legal*: "Our product documentation serves as the definitive product description. If the documentation does not accurately describe the product that the customer has purchased, we cannot recognize revenue."
 
-Showing everyone a robust sample of badged documentation generates discussion across the organization about badging and other requirements for product documentation.
+Showing everyone a robust sample of badged documentation generates discussion across the organization about badging and other requirements for product documentation. 

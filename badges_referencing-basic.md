@@ -1,4 +1,4 @@
-# Referencing badges in your topics
+# Conref and keyref references to badge libraries
 
 If you have built a library for your badges and assigned each of them a unique ID, you can use @conref or @conkeyref to insert them by reference them into your current topic. 
 

@@ -1,4 +1,4 @@
-# Referencing badges in shared topics
+# Conref/keyref push references to badge libraries
 
 What happens when the badged topics that support your three-product context get referenced by someone from another product group? At a minimum, they'll get a build error (missing key or reference). Ultimately their customers will not understand what is going on. 
 
@@ -50,4 +50,4 @@ Before build time, you see no change in target topic content. At build time, the
 
 This would be the location where you would insert a section-level badge manually. If another team references `Untitled1.dita` without referencing `conrefpush.dita`, the badge never appears in their generated output.  
 
-As with many of these gee-whiz features in DITA, you need to weigh the benefits of implementing conref push against the complexity that it introduces. Some technical solutions create more governance problems than they are worth. 
+Conref push is an acquired taste. You need to weigh the benefits of implementing conref push against the complexity that it introduces. Some technical solutions create more governance problems than they are worth. 

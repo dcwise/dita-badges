@@ -32,20 +32,13 @@ Filtering markup in a DITAVAL script:
 
 ```xml
 <val>
-   <prop att="product" val="cloud-connect" action="exclude" />
+   <prop att="product" val="cloud-compute" action="exclude" />
+   <prop att="product" val="cloud-net" action="exclude" />
+   <prop att="product" val="cloud-connect" action="include" />
 </val>
 ```
 
-Badging markup: 
+DITA filtering does a brilliant job supporting a one-to-many relationship between source content and generated content. One DITA source topic tagged with multiple filtering attribute values can generate multiple, distinct versions of itself. The logic for content badging involves a one-to-one relationship between a source topic and its generated version. All the "badges" or badging metadata that you need to include in that one, multi-platform or multi-product version of a topic must be  included in the one source DITA topic *and* included in generated output topic.    
 
-```xml
-<p id="p_badge_icon_cloud-connect_section_yes">
-  <image href="images/badge_cloud-connect_small_yes.png"></image>
-  <ph>This section applies exclusively to Cloud Connect.</ph>
-</p>
-<p>Cloud Connect is great.</p>
-```
-
-Filtering does a brilliant job supporting a many-to-one relationship between source content and delivered content. Many product-specific variations are filtered out to produce that one product-specific deliverable. Badging involves a many-to-many relationship. All the product-specific variations in the sources need to be accounted for in a multi-product deliverable.   
-
-The real challenges with badging involve logic.  
+The logic that you used in designing DITA filtering is transferable to the logic for DITA content badging.
+  
