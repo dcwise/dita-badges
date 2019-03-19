@@ -2,13 +2,20 @@
 
 This repo contains draft content for an OASIS DITA Adoption whitepaper on content badging. 
 
+<ul>
+<li><a href="#usecases">A typical use case for content badging</a></li>
+<li><a href="#logic">Establishing logic for your badges</a>
+  <ul>
+     <li><a href="#logic-global">Global statements about non-badged content</a></li>
+  </ul>	 
+</li>
+<ul>
+
 You can clone or download all the sample badges and the supporting DITA examples at:
 
 `https://github.com/StanDoherty/dita-badges`.
 
 The DITA map referencing stand-alone Markdown topics is `whitepaper_dita-badges.ditamap`. A PDF generated from those hybrid DITA/Markdown sources is available at:
-
-![DITA Badging PDF](pdf/whitepaper_dita-badges.pdf)
 
 Badging in general is a popular topic. The three most popular forms of badging are:
 
@@ -41,7 +48,7 @@ Badging in general is a popular topic. The three most popular forms of badging a
 Content badging allows writing teams to "tag" content as applicable or inapplicable to a specific technology, product, release level, or audience. 
 
 
-## A typical use case for content badging
+## A typical use case for content badging <a name="usecase"></a>
 
 A startup named CloudSquared develops resource monitoring software for cloud-based frameworks. For its first product, Cloud Compute Monitoring, the content development team develops a complete documentation set.
 
@@ -85,11 +92,11 @@ DITA filtering does a brilliant job supporting a one-to-many relationship betwee
 
 The logic that you used in designing DITA filtering is transferable to the logic for DITA content badging.
 
-## Establishing logic for your badges
+## Establishing logic for your badges <a name="logic"></a>
 
 Incomplete or fuzzy standards around the logic of badging is the most frequent reason that it fails in content development organizations. Investing in crisp specifications with practical examples is critical. 
 
-### Global statements about non-badged content
+### Global statements about non-badged content <a name="logic-global"></a>
 
 The first step toward providing logic for your publication is having a global statement about non-badged content.
 
