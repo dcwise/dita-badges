@@ -46,9 +46,9 @@ Badging in general is a popular topic. The three most popular forms of badging a
   ![Applicable only to Cloud Compute](./images/tag_cloud-compute_supported.svg) This topic applies exclusively to Cloud Compute. 
 
 Content badging allows writing teams to "tag" content as applicable or inapplicable to a specific technology, product, release level, or audience. 
+<a name="usecases"></a>
 
-
-## A typical use case for content badging <a name="usecase"></a>
+## A typical use case for content badging 
 
 A startup named CloudSquared develops resource monitoring software for cloud-based frameworks. For its first product, Cloud Compute Monitoring, the content development team develops a complete documentation set.
 
@@ -91,12 +91,14 @@ Filtering markup in a DITAVAL script:
 DITA filtering does a brilliant job supporting a one-to-many relationship between source content and generated content. One DITA source topic tagged with multiple filtering attribute values can generate multiple, distinct versions of itself. The logic for content badging involves a one-to-one relationship between a source topic and its generated version. All the "badges" or badging metadata that you need to include in that one, multi-platform or multi-product version of a topic must be  included in the one source DITA topic *and* included in generated output topic.    
 
 The logic that you used in designing DITA filtering is transferable to the logic for DITA content badging.
+<a name="logic"></a>
 
-## Establishing logic for your badges <a name="logic"></a>
+## Establishing logic for your badges 
 
 Incomplete or fuzzy standards around the logic of badging is the most frequent reason that it fails in content development organizations. Investing in crisp specifications with practical examples is critical. 
+<a name="logic-global"></a>
 
-### Global statements about non-badged content <a name="logic-global"></a>
+### Global statements about non-badged content 
 
 The first step toward providing logic for your publication is having a global statement about non-badged content.
 
