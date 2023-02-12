@@ -3,47 +3,26 @@
 copyright:
   years: 2015, 2021
 
-lastupdated: "2021-09-01"
+lastupdated: "2021-08-27"
 
-keywords: markdown markup
+keywords: 
 
-subcollection: writing
+subcollection: overview
 
 ---
 
-# Heading level 1
-{: #heading-level}
+{{site.data.keyword.attribute-definition-list}}
 
-The first paragraph that is also the short description.
-{: shortdesc}
+# Example topic that is reusing content
+{: #example-topic}
 
-Here is an ordered list:
+{{site.data.content.my-shortdesc-reuse}}
 
-1. List item 1
-2. List item 2
+## This is an H2 in the topic
+{: #example-topic-h2}
 
-Here is a simple paragraph.  *Emphasized* and **strong** text can be defined within the paragraph.  [Links](https://markdown.sample.com/) can also be defined.
+This is some text that is in the topic.
 
-Here is an unordered list:
+Maybe I have a bulleted list that also is being reused:
 
-- List item 1
-- List item 2
-
-![Video title](https://www.youtube.com/embed/<video-ID>){: video output="iframe" data-script="none" id="youtubeplayer" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen}
-
-Followed by a definition list.
-
-term 1
-:   Definition 1 for term 1.
-
-term 2
-:   Definition 2 for term 2.
-:   Second part of definition for term 2.
-
-And finally, a table.
-
-| Column 1 | Column 2 | Column 3 |
-|----------|----------|----------|
-| row 1, cell 1 | row 1, cell 2 | row 1, cell 3 |
-| row 2, cell 1 | row 2, cell 2 | row 2, cell 3 |
-{: caption="Table 1. Table caption text" caption-side="top"}
+{{site.data.content.unordered-list-reuse}}
